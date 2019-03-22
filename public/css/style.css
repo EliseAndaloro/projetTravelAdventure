@@ -1,0 +1,28 @@
+header{
+	/* position : fixed; */ 
+	padding-bottom : 20px;
+	background-color : #dee7f4;
+	position : sticky;
+	top : 0;
+
+	
+}
+
+#slide1{
+	background-image: url(../img/mountainTravel.jpg);
+	 height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top : 80px;
+
+}
+
+#slide2{
+	background-image: url(../img/desertTravel.jpg) ;
+	 height: 500px; 
+
+}
