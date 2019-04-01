@@ -36,25 +36,7 @@
         <script src="script.js"></script>
     </body>
     
-        <footer class="page-footer" id="footer_content">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text footer_color">Contacts</h5>
-                <p class="footer_color">Mail : travel.adventure@gmail.com <br> Tel : 0000000000<br> Address : Route de l'Aventure</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="footer_color">Links</h5>
-                <ul>
-                  <li><a class="footer_color text-lighten-3" href="#!">Séjour</a></li>
-                  <li><a class="footer_color text-lighten-3" href="#!">Week-end</a></li>
-                  <li><a class="footer_color text-lighten-3" href="#!">Randonnée</a></li>
-                  <li><a class="footer_color text-lighten-3" href="#!">Mon Compte</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
+        <footer class="page-footer" id="footer_content">          
           <div class="footer-copyright">
             <div class="container">
             <span class="footer_color">© 2019 Mémé & Lisnou</span>
