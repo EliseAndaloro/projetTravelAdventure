@@ -21,6 +21,32 @@
 	background-repeat : no-repeat;
 	height: 500px;
 }
+
+#mongolfiere1{
+	widht: 200px;
+	height: 250px;
+	position: relative;
+	background-image : url(../img/mongolefiere1.svg);
+	background-repeat: no-repeat;
+	animation: bounce 0.90s ease infinite alternate;
+}
+
+#mongolfiere2{
+	width: 150px;
+	height:200px;
+	position: relative;
+	background-image : url(../img/mongolefiere2.svg);
+	background-repeat: no-repeat;
+	animation: bounce 0.90s ease infinite alternate;
+	float : right;
+	
+}
+
+@keyframes bounce{
+     from {top: 106px;}
+     to   {top: 86px;}
+}
+
 @import url('https://fonts.googleapis.com/css?family=Baloo+Chettan');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 

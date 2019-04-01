@@ -2,7 +2,10 @@
 
 @section ('content')
 	<div id="slide1">
+		<div id="mongolfiere1">
 
+		</div>
+		<div id="mongolfiere2">
 
 		</div>
 	</div>
