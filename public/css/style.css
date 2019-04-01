@@ -1,52 +1,48 @@
-
-
-
-#slide1{
+#slide1 {
 	background-image: url(../img/fond1.svg);
-  height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-
+	height: 680px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-#slide2{
+#slide2 {
 	background-image: url(../img/fond2.svg);
-	background-repeat : no-repeat;
-	 height: 500px;
-   background-attachment: fixed;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-
-
+	height: 680px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
+#slide3 {
+	background-image: url(../img/fond3.svg);
+	background-repeat : no-repeat;
+	height: 500px;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 
 .header {
-  position : fixed;
-
-  background: #cad8ba;
+	position: fixed;
+	background: #cad8ba;
 }
 
-nav > a{
+nav>a {
 	font-family: 'Montserrat';
 	font-weight: bold;
 }
 
-#footer_content{
+#footer_content {
 	background-color: #e9f2de;
 }
 
-.footer_color{
+.footer_color {
 	color: #526040 !important;
 }
 
-.reseau{
-	width : 30px;
-	height : 30px;
+.reseau {
+	width: 30px;
+	height: 30px;
 }
