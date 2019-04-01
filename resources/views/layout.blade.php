@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>App Name - @yield('title')</title>
         <link rel="stylesheet" href=" {{ asset('css/app.css') }} ">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -11,15 +12,23 @@
     </head>
     <body>
         <header>
-		<nav class="header nav nav-pills nav-fill">
+		<nav class="header nav nav-pills nav-fill" id="main">
   			<a class="nav-item nav-link " href="#">ACCUEIL</a>
   			<a class="nav-item nav-link" href="#">SEJOUR</a>
   			<a class="nav-item nav-link" href="#">WEEK-END</a>
   			<a class="nav-item nav-link" href="#" ><img src="img/LOGO.svg" id="logo"></a>
   			<a class="nav-item nav-link" href="#">RANDONNÉE</a>
   			<a class="nav-item nav-link" href="#">CONTACT</a>
-  			<a class="nav-item nav-link" href="#"><i class="small material-icons">card_travel</i></a>
+  			<a class="openbtn nav-item nav-link" onclick="openNav()"><i class="small material-icons">card_travel</i></a>
 		</nav>
+
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
 
 	</header>
 
@@ -29,18 +38,18 @@
 
 
 
-      
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script type="text/javascript" src=" {{ asset('js/app.js') }} "></script>
         <script type="text/javascript" src="js/script.js"></script>
         <script src="script.js"></script>
     </body>
-    
-        <footer class="page-footer" id="footer_content">          
+
+        <footer class="page-footer" id="footer_content">
           <div class="footer-copyright">
             <div class="container">
             <span class="footer_color">© 2019 Mémé & Lisnou</span>
-            
+
             <div class="grey-text text-lighten-4 right" href="#">
             	<img src="img/facebook.svg" class="reseau">
             	<img src="img/twitter.svg" class="reseau">
