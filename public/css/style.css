@@ -38,3 +38,16 @@ nav > a{
 	font-family: 'Montserrat';
 	font-weight: bold;
 }
+
+#footer_content{
+	background-color: #e9f2de;
+}
+
+.footer_color{
+	color: #526040 !important;
+}
+
+.reseau{
+	width : 30px;
+	height : 30px;
+}
