@@ -21,7 +21,7 @@
 	background-repeat : no-repeat;
 	height: 500px;
 }
-
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 
 .header {
@@ -30,7 +30,8 @@
 }
 
 nav>a {
-	font-family: 'Montserrat';
+  text-transform: uppercase;
+  font-family: 'Baloo Chettan', cursive;
 	font-weight: bold;
 }
 
