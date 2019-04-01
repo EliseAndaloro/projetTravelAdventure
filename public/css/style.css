@@ -1,33 +1,26 @@
-/* header{
-	position : fixed;
-	padding-bottom : 20px;
-	background-color : #dee7f4;
-	position : sticky;
-	top : 0;
 
 
-}
 
 #slide1{
-	background-image: url();
-	 height: 500px;
-
-  Create the parallax scrolling effect
+	background-image: url(../img/fond1.svg);
+  height: 500px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top : 80px;
+
 
 }
 
 #slide2{
-	background-image: url() ;
+	background-image: url('img/fond1.svg') ;
 	 height: 500px;
 
 }
- */
+
 
 .header {
+  position : sticky;
+  top: 0;
   background: #cad8ba;
 }
