@@ -28,6 +28,13 @@
 }
  */
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
 .header {
   background: #cad8ba;
+}
+
+nav > a{
+	font-family: 'Montserrat';
+	font-weight: bold;
 }
