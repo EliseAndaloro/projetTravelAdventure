@@ -1,16 +1,16 @@
 /* header{
-	position : fixed; 
+	position : fixed;
 	padding-bottom : 20px;
 	background-color : #dee7f4;
 	position : sticky;
 	top : 0;
 
-	
+
 }
 
 #slide1{
 	background-image: url();
-	 height: 500px; 
+	 height: 500px;
 
   Create the parallax scrolling effect
   background-attachment: fixed;
@@ -23,7 +23,11 @@
 
 #slide2{
 	background-image: url() ;
-	 height: 500px; 
+	 height: 500px;
 
 }
  */
+
+.header {
+  background: #fff4ed;
+}
