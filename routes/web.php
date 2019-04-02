@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/produit', function () {
+    return view('detailsproduits');
+});
