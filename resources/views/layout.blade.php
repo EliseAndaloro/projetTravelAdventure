@@ -16,7 +16,7 @@
   			<a class="nav-item nav-link " href="#">ACCUEIL</a>
   			<a class="nav-item nav-link" href="#">SEJOUR</a>
   			<a class="nav-item nav-link" href="#">WEEK-END</a>
-  			<a class="nav-item nav-link" href="#" ><img src="img/LOGO.svg" id="logo"></a>
+  			<a class="nav-item nav-link" href="#"><img src="img/LOGO.svg" id="logo"></a>
   			<a class="nav-item nav-link" href="#">RANDONNÉE</a>
   			<a class="nav-item nav-link" href="#">CONTACT</a>
   			<a class="openbtn nav-item nav-link" onclick="openNav()"><i class="small material-icons">card_travel</i></a>
