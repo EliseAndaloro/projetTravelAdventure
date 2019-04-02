@@ -6,6 +6,10 @@
 	height:400px;
 }
 
+#separateur{
+	border-right : solid 1px black;
+}
+
 label{
 	font-weight: bold;
 	color: black;

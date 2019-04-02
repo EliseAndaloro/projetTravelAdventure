@@ -5,7 +5,7 @@
 
 <div class="contenu">
 	<div class="row">
-		<div class="col s1">
+		<div class="col s1"id="separateur">
 			<img class="materialboxed" width="500" src="img/desertTravel.jpg">
 		</div>
 		<div class="col s1">
