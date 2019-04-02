@@ -22,12 +22,12 @@
   			<a class="openbtn nav-item nav-link" onclick="openNav()"><i class="small material-icons">card_travel</i></a>
 		</nav>
 
-    <div id="mySidebar" class="sidebar">
+    <div id="mySidepanel" class="sidepanel">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
+      <a href="#" class="monpanier">MON PANIER</a>
+
+        <a class="connexion waves-effect waves-light btn-small">connexion</a>
+        <a class="inscription waves-effect waves-light btn-small">inscription</a>
     </div>
 
 	</header>

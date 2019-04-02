@@ -1,3 +1,7 @@
+/*header*/
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
 #slide1 {
 	background-image: url(../img/fond1.svg);
 	height: 680px;
@@ -21,14 +25,15 @@
 	background-repeat : no-repeat;
 	height: 500px;
 }
-@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 
 .header {
+
 	position: fixed;
 	background: #cad8ba;
 }
-
+.nav-item {
+		  font-family: 'Baloo Chettan', cursive;
+}
 nav>a {
   text-transform: uppercase;
   font-family: 'Baloo Chettan', cursive;
@@ -48,53 +53,51 @@ nav>a {
 	height: 30px;
 }
 
-
-
-
-.sidebar {
-  height: 100%;
+/*Sidenav panier*/
+.sidepanel  {
   width: 0;
   position: fixed;
   z-index: 1;
+  height: 100%;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #f7eeee;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
 }
 
-.sidebar a {
-  padding: 8px 8px 8px 32px;
+.sidepanel a {
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
   display: block;
   transition: 0.3s;
 }
 
-.sidebar a:hover {
-  color: #f1f1f1;
-}
 
-.sidebar .closebtn {
+.sidepanel .closebtn {
   position: absolute;
   top: 0;
   right: 25px;
   font-size: 36px;
-  margin-left: 50px;
 }
 
 .openbtn {
   cursor: pointer;
+  color: white;
 }
 
-#main {
-  transition: margin-right .5s;
+.connexion, .inscription {
+	margin-left: 17px;
+	margin-right: 17px;
+	margin-bottom: 20px;
+	background: #cad8ba;
+	color: #fff;
+	font-size: 20px;
 }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
+.monpanier {
+  font-family: 'Baloo Chettan', cursive;
+	margin-left: 42px;
+	margin-bottom: 30px;
+	font-size: 30px
 }
