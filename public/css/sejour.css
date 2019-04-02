@@ -1,9 +1,8 @@
-.contenu{
-	margin-top:100px;
-
+header {
+	margin-bottom: 120px;
 }
 
-#mini{
-	width: 100px;
-	height: 100px;
+.card {
+	width: 305px;
+	height: 305px;
 }
