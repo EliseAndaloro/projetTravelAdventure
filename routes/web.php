@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/sejour', function () {
+    return view('sejour');
+});
