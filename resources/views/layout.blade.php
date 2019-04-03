@@ -3,20 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>App Name - @yield('title')</title>
+        <title>Travel Adventure</title>
         <link rel="stylesheet" href=" {{ asset('css/app.css') }} ">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+ 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
         <header>
 		<nav class="header nav nav-pills nav-fill" id="main">
-  			<a class="nav-item nav-link " href="#">ACCUEIL</a>
-  			<a class="nav-item nav-link" href="#">SEJOUR</a>
+  			<a class="nav-item nav-link " href="">ACCUEIL</a>
+  			<a class="nav-item nav-link" href="sejour">SEJOUR</a>
   			<a class="nav-item nav-link" href="#">WEEK-END</a>
-  			<a class="nav-item nav-link" href="#"><img src="img/LOGO.svg" id="logo"></a>
+  			<a class="nav-item nav-link" href="" ><img src="img/LOGO.svg" id="logo"></a>
   			<a class="nav-item nav-link" href="#">RANDONNÉE</a>
   			 @guest
   			<a class="nav-item nav-link" href="compte">MON COMPTE</a>
