@@ -17,14 +17,17 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
-        if ($product->categorie == 'sejour'){
+        if ($products->categorie == 'sejour'){
             return view('sejour', ['produits' => $products]);
         }
-        elseif($product->categorie == 'weekend'){
+        elseif($products->categorie == 'weekend'){
             return view('weekend', ['produits' => $products]);
         }
-        elseif($product->categorie == 'randonne'){
+        elseif($products->categorie == 'randonne'){
             return view('randonne', ['produits' => $products]);
+        }
+        else{
+            return "oups";
         }
     }
 
@@ -35,7 +38,14 @@ class ProductController extends Controller
      */
     public function create()
     {
+        $user = Auth::user();
         
+        if($user->is_admin == 1){
+            return view('admin');
+        }
+        else{
+            return "Fonctionnalités non autorisées ! ";
+        }
     }
 
     /**
@@ -46,7 +56,14 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = Auth::user();
+        if($user->is_admin == 1){
+            Product::create($request->all());
+            return "Article crée !!!!!!!!!";
+        }
+        else{
+            return "zieifjrzoùifhoeùfhrg!";
+        }
     }
 
     /**
@@ -66,9 +83,16 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Product $product)
     {
-        //
+        $user = Auth::user();
+        
+        if($user->is_admin == 1){
+            return view('editproduct', compact('product'));
+        }
+        else{
+            return "Fonctionnalités non autorisées ! ";
+        }
     }
 
     /**
@@ -78,9 +102,10 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Product $product)
     {
-        //
+        $product->update($request->all());
+        return "article modif";
     }
 
     /**
@@ -89,8 +114,15 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        //
+        $user = Auth::user();
+        if($user->is_admin == 1){
+            $product->delete();
+            return " article supp";
+        }
+        else{
+            return "Fonctionnalités non autorisées ! ";
+        }
     }
 }
