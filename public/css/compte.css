@@ -31,12 +31,12 @@
 
 }
 
-a {
+.inscrit {
   text-decoration: none;
   color: #FFF;
 }
 
-a:hover{
+.inscrit:hover{
   text-decoration: none;
   color: #FFF;
 }

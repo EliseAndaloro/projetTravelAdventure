@@ -46,7 +46,7 @@
                           {{ __('Login') }}
                         </button>
 												<button class="login">
-												<a href="inscription">Je m'inscris</a>
+												<a class="inscrit"href="inscription">Je m'inscris</a>
 												</button>
 												</div>
                             </div>
