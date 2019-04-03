@@ -39,11 +39,8 @@
 
 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script type="text/javascript" src=" {{ asset('js/app.js') }} "></script>
-        <script type="text/javascript" src="js/script.js"></script>
-        <script src="script.js"></script>
-    </body>
+
+
 
         <footer class="page-footer" id="footer_content">
           <div class="footer-copyright">
@@ -58,5 +55,9 @@
             </div>
           </div>
         </footer>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script type="text/javascript" src=" {{ asset('js/app.js') }} "></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <script src="script.js"></script>
+      </body>
 </html>
