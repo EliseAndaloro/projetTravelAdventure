@@ -1,7 +1,8 @@
 @extends('layout')
 
 @section('content')
-<div class="container" style="margin-top:100px">
+	<link rel="stylesheet" href="css/compte.css">
+<div class="container" style="margin-top:130px">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -63,8 +64,8 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                <button type="submit" class="login">
+                                    Je m'inscris
                                 </button>
                             </div>
                         </div>
