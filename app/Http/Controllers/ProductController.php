@@ -9,26 +9,23 @@ use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        $products = Product::all();
-        if ($products->categorie == 'sejour'){
-            return view('sejour', ['produits' => $products]);
-        }
-        elseif($products->categorie == 'weekend'){
-            return view('weekend', ['produits' => $products]);
-        }
-        elseif($products->categorie == 'randonne'){
-            return view('randonne', ['produits' => $products]);
-        }
-        else{
-            return "oups";
-        }
+        $products = Product::where('categorie',$id)->get();
+        
+      
+        return view('/sejour')->withProducts($products);     
+           
+        
+        
+        
+        
     }
 
     /**

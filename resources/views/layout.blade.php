@@ -13,11 +13,11 @@
     <body>
         <header>
 		<nav class="header nav nav-pills nav-fill" id="main">
-  			<a class="nav-item nav-link " href="">ACCUEIL</a>
+  			<a class="nav-item nav-link " href="/projetTravelAdventure/public/">ACCUEIL</a>
   			<a class="nav-item nav-link" href="sejour">SEJOUR</a>
-  			<a class="nav-item nav-link" href="#">WEEK-END</a>
+  			<a class="nav-item nav-link" href="weekend">WEEK-END</a>
   			<a class="nav-item nav-link" href="" ><img src="img/LOGO.svg" id="logo"></a>
-  			<a class="nav-item nav-link" href="#">RANDONNÉE</a>
+  			<a class="nav-item nav-link" href="randonne">RANDONNÉE</a>
   			 @guest
   			<a class="nav-item nav-link" href="compte">MON COMPTE</a>
   			@else

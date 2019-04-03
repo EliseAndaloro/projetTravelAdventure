@@ -14,9 +14,10 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/sejour', function () {
-    return view('sejour');
-});
+
+
+
+
 Route::get('/produit', function () {
     return view('detailsproduits');
 });
@@ -40,7 +41,7 @@ Route::get('/addproduct', function () {
 Route::get('/editproduct/{product}', 'ProductController@edit');
 Route::get('product/{product}/destroy', 'ProductController@destroy');
         
-        
+Route::get('/{id}', 'ProductController@index')->where('id','[A-Za-z]+');
         
         
         
