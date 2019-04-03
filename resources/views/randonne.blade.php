@@ -21,7 +21,7 @@
 		  </div>
 		</div>
 	</div>
-@endforeach	
+@endforeach
 <!-- 	<div class="col s3"> -->
 <!-- 		<div class="contenu"> -->
 <!-- 			<div class="card"> -->
