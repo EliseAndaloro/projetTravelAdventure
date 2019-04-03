@@ -15,12 +15,12 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index($name)
     {
-        $products = Product::where('categorie',$id)->get();
+        $products = Product::where('categorie',$name)->get();
         
       
-        return view('/sejour')->withProducts($products);     
+        return view('categorie')->withProducts($products);     
            
         
         
