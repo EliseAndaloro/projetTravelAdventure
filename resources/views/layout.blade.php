@@ -18,17 +18,25 @@
   			<a class="nav-item nav-link" href="#">WEEK-END</a>
   			<a class="nav-item nav-link" href="#"><img src="img/LOGO.svg" id="logo"></a>
   			<a class="nav-item nav-link" href="#">RANDONNÉE</a>
-  			<a class="nav-item nav-link" href="compte">MON COMPTE
-  				<a  href="{{ route('logout') }}"
+  			 @guest
+  			<a class="nav-item nav-link" href="compte">MON COMPTE</a>
+  			@else
+  				 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('c') }}
+                                        {{ __('Logout') }}
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-  			</a>
+                                </div>
+            @endguest
   			<a class="openbtn nav-item nav-link" onclick="openNav()"><i class="small material-icons">card_travel</i></a>
 		</nav>
 
