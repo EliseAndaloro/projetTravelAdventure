@@ -1,7 +1,8 @@
 @extends ('layout')
 
 @section ('content')
-	<img src="http://placehold.it/350x200" style="margin-top : 100px;">
+	<img src="img/connexion.svg" style="margin-top : 100px; width: 300px; height: 250px;
+	margin-left: 38%; margin-right: 38%;">
 	<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -73,5 +74,5 @@
 </div>
 <a href="inscription">Je m\'inscris !</a>
 
-    
+
 @endsection
