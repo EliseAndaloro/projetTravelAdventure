@@ -41,11 +41,11 @@
 		</nav>
 
     <div id="mySidepanel" class="sidepanel">
+          <a href="#" class="monpanier">MON PANIER</a>
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-      <a href="#" class="monpanier">MON PANIER</a>
+      <button type="button" class="validerPanier" name="button">Je commande</button>
 
-        <a class="connexion waves-effect waves-light btn-small">connexion</a>
-        <a class="inscription waves-effect waves-light btn-small">inscription</a>
+
     </div>
 
 	</header>
@@ -76,6 +76,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script type="text/javascript" src=" {{ asset('js/app.js') }} "></script>
         <script type="text/javascript" src="js/script.js"></script>
-       
+
       </body>
 </html>

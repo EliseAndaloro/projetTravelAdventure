@@ -1,17 +1,18 @@
 @extends ('layout')
 @section ('content')
- 
+
 <div id="slide1">
 	<div id="mongolfiere1"></div>
 
 	<div id="mongolfiere2"></div>
 
-	<a class="waves-effect waves-light btn" id="button">Voir les offres !</a>
+	<a class="waves-effect waves-light btn" id="button">voir les randonnées</a>
 </div>
 
 
 <div id="slide2">
-	<a class="waves-effect waves-light btn" id="button2">Voir les offres !</a>
+  <p class="textWeek">hello summer</p>
+	<a class="waves-effect waves-light btn" id="button2">voir les weekend</a>
 </div>
 
 <div id="slide3"></div>

@@ -7,7 +7,7 @@
 	position:fixed;
 	top:0;
 	background: #cad8ba;
- 	z-index : 2; 
+ 	z-index : 2;
 }
 
 nav>a {
@@ -91,12 +91,42 @@ nav>a {
     padding-left: 150px;
     padding-right : 150px;
     margin-left : 450px;
-    background-color: #eae6af;
+    background-color: #81c9c5;
     attachment: fixed;
     z-index: 1;
+		border-radius: 100px;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 400;
+		font-size: 12px;
+		text-transform: uppercase;
+		color: #FFF;
+		letter-spacing: 1.98px;
 }
 
-/*Sidenav panier*/
+#button2{
+    display:inline-block;
+    padding-left: 150px;
+    padding-right : 150px;
+    margin-left : 450px;
+    background-color: #f28e79;
+    attachment: fixed;
+    z-index: 1;
+		border-radius: 100px;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 400;
+		font-size: 12px;
+		text-transform: uppercase;
+		color: #FFF;
+		letter-spacing: 1.98px;
+		margin-top: 300px;
+}
+
+
+************************/*Sidenav panier*/**********************
+#mySidepanel {
+		background-image: url(../img/anier.svg);
+		background-repeat: no-repeat;
+}
 .sidepanel  {
   width: 0;
   position: fixed;
@@ -104,7 +134,7 @@ nav>a {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #f7eeee;
+  background-color: #fff6e9;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -141,6 +171,55 @@ nav>a {
 .monpanier {
   font-family: 'Baloo Chettan', cursive;
     margin-left: 42px;
-    margin-bottom: 30px;
-    font-size: 30px
+    font-size: 30px;
+		color: #f28e79;
+		margin-top: 130px;
+}
+
+.closebtn {
+	  font-family: 'Baloo Chettan', cursive;
+			color: #f28e79;
+}
+
+.monpanier:hover, .closebtn:hover {
+	color:#FF935E;
+}
+
+.validerPanier {
+	background-color: #f28e79;
+	border: none;
+	padding-left: 37px;
+	padding-right: 37px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	border-radius: 100px;
+
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #FFF;
+	letter-spacing: 1.98px;
+
+	display: block;
+	align-content: center;
+	margin: auto;
+}
+
+.validerPanier:hover{
+	background-color: #FF935E;
+	cursor: pointer;
+	-ms-transform: scale(1.03);
+	-webkit-transform: scale(1.03);
+	transform: scale(1.03);
+}
+
+******************/*text page accueil*/****************
+
+.textWeek {
+	font-family: 'Baloo Chettan', cursive;
+		margin-left: 42px;
+		font-size: 30px;
+		color: #f28e79;
+		margin-top: 130px;
 }
