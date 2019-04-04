@@ -34,11 +34,32 @@
 .inscrit {
   text-decoration: none;
   color: #FFF;
+  background-color: #f28e79;
+  padding-left: 37px;
+  padding-right: 37px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 100px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #FFF;
+  letter-spacing: 1.98px;
+
+  align-content: center;
+  margin-left: 185px;
 }
 
 .inscrit:hover{
   text-decoration: none;
   color: #FFF;
+  background-color: #FF935E;
+    cursor: pointer;
+    -ms-transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
 }
 
 .mesBoutons {

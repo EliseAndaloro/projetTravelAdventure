@@ -1,7 +1,7 @@
 @extends ('layout')
 
 @section ('content')
-<link rel="stylesheet" href="css/ficheproduit.css">
+<link rel="stylesheet" href="{{ asset('css/ficheproduit.css')}}">
 <div id="body">
 <div class="diagonale"></div>
 <div class="contenu">
@@ -9,15 +9,14 @@
 	<div class="row">
 
 		<div class="col s1"id="separateur">
-			<img class="materialboxed" width="450" src="img/desertTravel.jpg">
+			<img class="materialboxed" width="450" src="{{ asset('img/desertTravel.jpg') }}">
 		</div>
 
 		<div class="col s1">
-			<h5 class="font1">SEJOUR A LA PLAGE EN FAMILLE</h5>
-			<div id="price">150€/pers</div>
-			<p class="font">Post emensos insuperabilis expeditionis eventus languentibus
-				partium animis, quas periculorum varietas fregerat et laborum,
-				nondum tubarum cessante clangore vel milite.
+		@foreach($product as $product)
+			<h5 class="font1">{{ $product->id }}</h5>
+			<div id="price">{{ $product->price }} €</div>
+			<p class="font">{{ $product->description }}
 			</p>
 			<label>Choisissez le nombre de personnes : </label> <select
 				class="browser-default">
@@ -30,6 +29,7 @@
 				<option class="taille" value="3">6 personnes</option>
 			</select>
 			 <button class="basket">Je pars en voyage</button>
+			 @endforeach
 		</div>
 
 	</div>

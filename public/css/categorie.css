@@ -4,6 +4,27 @@ header {
 
 .carte {
 	width: 305px;
-	height: 500px;
+	height: 305px;
 	margin-right: 50px !important;
+}
+
+.plus{
+  text-decoration: none;
+  color: #FFF !important;
+  background-color: #f28e79 !important;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #FFF;
+  letter-spacing: 1.98px;
+  border-radius : 100px;
+}
+
+.plus:hover{
+	  text-decoration: none;
+  color: #FFF;
+  background-color: #FF935E !important;
+    cursor: pointer;
+
 }
