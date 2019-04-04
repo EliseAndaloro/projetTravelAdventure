@@ -3,16 +3,15 @@
 @section ('content')
 <link rel="stylesheet" href="css/categorie.css">
 
+<div>coucou</div>
 
-<div class="container">
-<div class="row">
-
-	<div class="col s3">coucou</div>
+<div class="row" style="width:1000px;">
+<div class="col">
 	@foreach($products as $product)
-	<div class="col s4 ">
-
+	
+<div class="col s4">
 		
-			<div class="card" id="carte">
+			<div class="card" >
 				<div class="card-image waves-effect waves-block waves-light">
 					<img class="activator" src="img/desertTravel.jpg">
 				</div>
@@ -21,7 +20,8 @@
 						$product->name }}<i class="material-icons right">more_vert</i>
 					</span>
 					<p>
-						<a href="#">En savoir plus</a>
+						
+					<a class="waves-effect waves-light btn plus" href="produit/{{ $product->id }}">Plus de détails</a>
 					</p>
 				</div>
 				<div class="card-reveal">
@@ -32,11 +32,12 @@
 				</div>
 			</div>
 		
-
-	</div>
+</div>
+	
 @endforeach
 </div>
-
 </div>
+
+
 
  @endsection

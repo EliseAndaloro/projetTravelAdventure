@@ -15,9 +15,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/produit', function () {
-    return view('detailsproduits');
-});
+
 
 Auth::routes();
 
@@ -30,7 +28,7 @@ Route::get('/compte', function () {
 Route::get('/inscription', function () {
     return view('inscription');
 });
-Route::resource('product', 'ProductController');
+
 
 Route::get('/addproduct', function () {
     return view('addproduct');
@@ -40,6 +38,7 @@ Route::get('product/{product}/destroy', 'ProductController@destroy');
         
 
 Route::get('/{name}', 'ProductController@index')->where('name','[A-Za-z]+');
+Route::get('/produit/{id}', 'ProductController@show')->where('id','[0-9]+');
         
-        
+
         

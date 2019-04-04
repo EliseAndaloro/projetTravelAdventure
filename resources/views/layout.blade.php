@@ -7,17 +7,17 @@
         <link rel="stylesheet" href=" {{ asset('css/app.css') }} ">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="{{ asset('css/style.css')}}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
         <header>
 		<nav class="header nav nav-pills nav-fill" id="main">
   			<a class="nav-item nav-link " href="/projetTravelAdventure/public/">ACCUEIL</a>
-  			<a class="nav-item nav-link" href="sejour">SEJOUR</a>
-  			<a class="nav-item nav-link" href="weekend">WEEK-END</a>
-  			<a class="nav-item nav-link" href="" ><img src="img/LOGO.svg" id="logo"></a>
-  			<a class="nav-item nav-link" href="randonne">RANDONNÉE</a>
+  			<a class="nav-item nav-link" href="{{ url('/sejour') }}">SEJOUR</a>
+  			<a class="nav-item nav-link" href="{{ url('/weekend') }}">WEEK-END</a>
+  			<a class="nav-item nav-link" href="" ><img src="{{ asset('img/LOGO.svg') }}" id="logo"></a>
+  			<a class="nav-item nav-link" href="{{ url('/randonne') }}">RANDONNÉE</a>
   			 @guest
   			<a class="nav-item nav-link" href="compte">MON COMPTE</a>
   			@else
@@ -50,9 +50,9 @@
 
 	</header>
 
-        <div>
+        
             @yield('content')
-        </div>
+        
 
 
 
@@ -66,16 +66,16 @@
             <span class="footer_color">© 2019 Mémé & Lisnou</span>
 
             <div class="grey-text text-lighten-4 right" href="#">
-            	<img src="img/facebook.svg" class="reseau">
-            	<img src="img/twitter.svg" class="reseau">
-            	<img src="img/insta.svg" class="reseau">
+            	<img src="{{ asset('img/facebook.svg') }}" class="reseau">
+            	<img src="{{ asset('img/twitter.svg') }}" class="reseau">
+            	<img src="{{ asset('img/insta.svg') }}" class="reseau">
             </div>
             </div>
           </div>
         </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script type="text/javascript" src=" {{ asset('js/app.js') }} "></script>
-        <script type="text/javascript" src="js/script.js"></script>
-
+        <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
+       
       </body>
 </html>
