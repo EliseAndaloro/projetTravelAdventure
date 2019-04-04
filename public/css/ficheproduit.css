@@ -133,3 +133,8 @@ label{
   -o-transform: skew(-30deg);
   transform: skew(-30deg);
 }
+
+/*card*/
+.row .col.s4 {
+	min-height:361px;
+}
