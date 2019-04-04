@@ -124,10 +124,11 @@ nav>a {
 
 ************************/*Sidenav panier*/**********************
 #mySidepanel {
-		background-image: url(../img/anier.svg);
-		background-repeat: no-repeat;
+
 }
 .sidepanel  {
+	background-image: url(../img/anier.svg);
+	background-repeat: no-repeat;
   width: 0;
   position: fixed;
   z-index: 3;
