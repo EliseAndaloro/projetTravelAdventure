@@ -4,7 +4,7 @@ header {
 
 .carte {
 	width: 305px;
-	height: 305px;
+	height: 361px;
 	margin-right: 50px !important;
 }
 
@@ -27,4 +27,12 @@ header {
   background-color: #FF935E !important;
     cursor: pointer;
 
+}
+
+.card .card-content {
+	height: 156px;
+}
+
+.card-title {
+	font-size: 15px;
 }

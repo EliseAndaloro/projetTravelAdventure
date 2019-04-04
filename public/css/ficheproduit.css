@@ -135,6 +135,6 @@ label{
 }
 
 /*card*/
-.row .col.s4 {
-	min-height:361px;
+.card-content{
+	height:156px;
 }
