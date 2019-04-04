@@ -6,14 +6,14 @@
 <div class="diagonale"></div>
 <div class="contenu">
 
-	<div class="row" height="4000px;">
-@foreach($product as $product)
+	<div class="row" style="z-index:2;">
+
 		<div class="col s1"id="separateur">
 			<img class="materialboxed" width="450" src="{{ $product->img }}">
 		</div>
 
 		<div class="col s1">
-
+		@foreach($product as $product)
 			<h5 class="font1">{{ $product->name }}</h5>
 			<div id="price">{{ $product->price }} €</div>
 			<p class="font">{{ $product->description }}
