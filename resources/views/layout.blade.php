@@ -51,7 +51,7 @@
 				<div class="card-content">
 					<span class="card-title activator grey-text text-darken-4">test<i class="material-icons right">more_vert</i>
 					</span>
-				
+
 				</div>
 				<div class="card-reveal">
 					<span class="card-title grey-text text-darken-4">test<i class="material-icons right">close</i>
@@ -59,18 +59,18 @@
 					<p>blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla</p>
 				</div>
 			</div>
-      
+
       </div>
-      <a class="validerPanier" name="button">Je Commande !</a>
+      <a class="validerPanier" name="button" href="{{ url('/cart') }}">Je Commande !</a>
 
 
     </div>
 
 	</header>
 
-        
+
             @yield('content')
-        
+
 
 
 
@@ -94,6 +94,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script type="text/javascript" src=" {{ asset('js/app.js') }} "></script>
         <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
-       
+
       </body>
 </html>

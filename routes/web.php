@@ -29,17 +29,16 @@ Route::get('/inscription', function () {
     return view('inscription');
 });
 
-
+Route::get('/cart', function () {
+    return view('cart');
+});
 
 Route::get('/addproduct', function () {
     return view('addproduct');
 });
 Route::get('/editproduct/{product}', 'ProductController@edit');
 Route::get('product/{product}/destroy', 'ProductController@destroy');
-        
+
 
 Route::get('/{name}', 'ProductController@index')->where('name','[A-Za-z]+');
 Route::get('/produit/{id}', 'ProductController@show')->where('id','[0-9]+');
-        
-
-        
