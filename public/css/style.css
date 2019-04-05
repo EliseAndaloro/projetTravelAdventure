@@ -19,11 +19,12 @@ nav>a {
 
 #footer_content {
     background-color: #e9f2de;
+    color: #526040 !important;
+	margin-top: 20px;
+	padding-top: 30px;
 }
 
-.footer_color {
-    color: #526040 !important;
-}
+
 
 .reseau {
     width: 30px;

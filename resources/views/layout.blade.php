@@ -46,7 +46,7 @@
       <div>
       <div class="card" >
 				<div class="card-image waves-effect waves-block waves-light">
-					<img class="activator" src="img/rando1.svg">
+					<img class="activator" src="{{ asset('img/rando1.svg') }}">
 				</div>
 				<div class="card-content">
 					<span class="card-title activator grey-text text-darken-4">test<i class="material-icons right">more_vert</i>
@@ -61,36 +61,32 @@
 			</div>
       
       </div>
-      <a class="validerPanier" name="button">Je Commande !</a>
+      <a class="validerPanier" name="button" href="{{ url('/cart') }}">Je Commande !</a>
 
 
     </div>
 
 	</header>
 
-        
+        <div>
             @yield('content')
         
+		</div>
 
 
 
 
 
-
-
-        <footer class="page-footer" id="footer_content">
-          <div class="footer-copyright">
-            <div class="container">
-            <span class="footer_color">© 2019 Mémé & Lisnou</span>
+		<footer id="footer_content">
+			<span>© 2019 Mémé & Lisnou</span>
 
             <div class="grey-text text-lighten-4 right" href="#">
             	<img src="{{ asset('img/facebook.svg') }}" class="reseau">
             	<img src="{{ asset('img/twitter.svg') }}" class="reseau">
             	<img src="{{ asset('img/insta.svg') }}" class="reseau">
             </div>
-            </div>
-          </div>
-        </footer>
+		</footer>
+       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script type="text/javascript" src=" {{ asset('js/app.js') }} "></script>
         <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>

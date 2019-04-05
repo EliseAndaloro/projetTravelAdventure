@@ -3,7 +3,7 @@
 @section ('content')
 <link rel="stylesheet" href="css/categorie.css">
 
-<div>coucou</div>
+<div>test</div>
 
 <div class="row" style="width:1000px;">
 <div class="col">
