@@ -43,7 +43,25 @@
     <div id="mySidepanel" class="sidepanel">
           <a href="#" class="monpanier">MON PANIER</a>
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-      <button type="button" class="validerPanier" name="button">Je commande</button>
+      <div>
+      <div class="card" >
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="img/rando1.svg">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">test<i class="material-icons right">more_vert</i>
+					</span>
+				
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">test<i class="material-icons right">close</i>
+					</span>
+					<p>blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla</p>
+				</div>
+			</div>
+      
+      </div>
+      <a class="validerPanier" name="button">Je Commande !</a>
 
 
     </div>

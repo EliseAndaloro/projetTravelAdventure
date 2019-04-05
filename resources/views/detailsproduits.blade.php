@@ -9,7 +9,7 @@
 	<div class="row" style="z-index:2;">
 	@foreach($product as $product)
 		<div class="col s1"id="separateur">
-			<img class="materialboxed" width="450" src="{{ $product->img }}">
+			<img class="materialboxed" width="450" src="../{{ $product->img }}">
 		</div>
 
 		<div class="col s1">
