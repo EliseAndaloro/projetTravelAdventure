@@ -133,3 +133,8 @@ label{
   -o-transform: skew(-30deg);
   transform: skew(-30deg);
 }
+
+/*********************** Edit product ************************/
+.edit{
+	text-align: center;
+}
