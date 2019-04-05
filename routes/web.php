@@ -29,7 +29,7 @@ Route::get('/inscription', function () {
     return view('inscription');
 });
 
-Route::resource('product', 'ProductController');
+
 
 Route::get('/addproduct', function () {
     return view('addproduct');

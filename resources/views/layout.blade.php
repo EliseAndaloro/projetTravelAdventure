@@ -19,7 +19,7 @@
   			<a class="nav-item nav-link" href="" ><img src="{{ asset('img/LOGO.svg') }}" id="logo"></a>
   			<a class="nav-item nav-link" href="{{ url('/randonne') }}">RANDONNÉE</a>
   			 @guest
-  			<a class="nav-item nav-link" href="compte">MON COMPTE</a>
+  			<a class="nav-item nav-link" href="{{ url('/compte') }}">MON COMPTE</a>
   			@else
   				 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
