@@ -16,7 +16,7 @@
 					<img class="activator" src="{{ $product->img }}">
 				</div>
 				<div class="card-content">
-					<span class="card-title activator grey-text text-darken-4">{{
+					<span class="test card-title activator grey-text text-darken-4">{{
 						$product->name }}<i class="material-icons right">more_vert</i>
 					</span>
 					<p>

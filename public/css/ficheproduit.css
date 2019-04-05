@@ -133,8 +133,3 @@ label{
   -o-transform: skew(-30deg);
   transform: skew(-30deg);
 }
-
-/*card*/
-.card-content{
-	height:156px;
-}
