@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,800');
+/*card artcile panier*/
+.card1 {
+  margin-left: 30px;
+  margin-top: 130px;
+  width: 400px;
+  height: 420px;
+
+}
+ .info {
+     text-transform: uppercase;
+     font-family: 'Open Sans', sans-serif;
+   	  text-transform: uppercase;
+   	  font-size: 17px;
+   	  color: #9B9B9B;
+   	  letter-spacing: 2px;
+ }
+
+ .ligne {
+   border-top: 1px solid #9e9e9e;
+   width : 350px;
+   margin-top: 25px;
+   margin-bottom: 25px;
+
+ }
+
+ .info2 {
+   text-transform: uppercase;
+   font-family: 'Open Sans', sans-serif;
+     text-transform: uppercase;
+     font-size: 17px;
+     color: #9B9B9B;
+     letter-spacing: 2px;
+     float: right;
+ }
+
+ .total {
+   text-transform: uppercase;
+   font-family: 'Baloo Chettan', cursive;
+   font-weight: bold;
+   color: #e88980;
+   letter-spacing: 2px;
+   font-size: 20px;
+
+ }
+
+ .prixtotal {
+   float: right;
+   text-transform: uppercase;
+   font-family: 'Baloo Chettan', cursive;
+   font-weight: bold;
+   color: #e88980;
+   letter-spacing: 2px;
+   font-size: 20px;
+ }
+
+ /*card paiement*/
+
+ .card2 {
+   margin-right: 30px;
+   margin-top: 130px;
+   width: 770px;
+   height: 500px;
+ }
+
+ .livraison {
+   text-transform: uppercase;
+   font-family: 'Baloo Chettan', cursive;
+   font-weight: bold;
+   color: #e88980;
+   letter-spacing: 2px;
+   font-size: 20px;
+
+ }
+
+ .userInfo {
+   text-transform: uppercase;
+   font-family: 'Open Sans', sans-serif;
+     text-transform: uppercase;
+     font-size: 17px;
+     color: #9B9B9B;
+     letter-spacing: 2px;
+     margin-bottom: 20px;
+ }
+
+ .ligne2 {
+   border-top: 1px solid #9e9e9e;
+   width : 720px;
+   margin-top: 25px;
+   margin-bottom: 25px;
+ }
+
+ .logoPayer {
+   margin-left: 15px;
+   margin-bottom: 30px;
+ }
+
+ .commander {
+   background-color: #f28e79;
+   border: none;
+   padding-right: 150px;
+   padding-left: 150px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   border-radius: 100px;
+
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 400;
+   font-size: 12px;
+   text-transform: uppercase;
+   color: #FFF;
+   letter-spacing: 1.98px;
+  display: block;
+  margin: auto;
+  align-content: center;
+ }
