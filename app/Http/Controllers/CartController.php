@@ -29,12 +29,16 @@ class CartController extends Controller
     public function create()
     {
         $product = $_GET['prodId'];
+        $nbpers = $_GET['nbpers'];
         $user = Auth::user();
         Cart::create([
             'product_id' =>$product,
             'user_id' => $user['id'],
+            'nbpers' => $nbpers,
             
         ]);
+        $id = DB::getPdo()->lastInsertId();
+        return redirect()->action('CartController@show', ['id'=>$id]);
        
     }
 
@@ -61,7 +65,7 @@ class CartController extends Controller
                     ->where('cart_id', $id)
                     ->join('products','product_id','=','products.id')
                     ->join('users','user_id','=','users.id')
-                    ->select( 'firstname', 'address', 'price', 'city', 'country')
+                    ->select('product_name', 'name', 'firstname', 'address', 'price', 'city', 'country')
                     ->get();
         
         

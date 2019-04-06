@@ -7,12 +7,12 @@
    <div class="col s4">
      <div class="card1 card-panel">
        <img src="{{ asset('img/rando1.svg') }}" alt="">
-       <span class="info"> {{ $cart->users.name }}
+       <span class="info"> {{ $cart->product_name }}
        </span>
-       <span class="info2">{{ $cart->price }}
+       <span class="info2">
        </span>
        <br>
-       <span class="info"> {{ $cart->price }}
+       <span class="info"> Prix/personne
        </span>
        <span class="info2"> {{ $cart->price }}
        </span>
@@ -38,7 +38,7 @@
         <br>
         
         <p class="userInfo">
-          Nom prenom 
+         {{ $cart->name }} {{ $cart->firstname }} 
         </p>
         <br>
         <p class="userInfo">
@@ -46,11 +46,11 @@
         </p>
         <br>
         <p class="userInfo">
-          ville {{ $cart->price }}
+          ville {{ $cart->city }}
         </p>
         <br>
         <p class="userInfo">
-          pays {{ $cart->price }}
+          pays {{ $cart->country }}
         </p>
 @endforeach
         <div class="ligne2">

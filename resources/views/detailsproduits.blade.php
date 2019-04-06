@@ -19,17 +19,18 @@
 			<div id="price">{{ $product->price }} €</div>
 			<p class="font">{{ $product->description }}
 			</p>
-			<label>Choisissez le nombre de personnes : </label> <select
-				class="browser-default">
+			<form method="get" action="{{ action('CartController@create') }}">
+			<label>Choisissez le nombre de personnes : </label> 
+			<select class="browser-default" name="nbpers" id="nbpers">
 				<option class="taille" value="">Plus on est de fous, plus on rit :)</option>
 				<option class="taille" value="1">1 personne</option>
 				<option class="taille" value="2">2 personnes</option>
 				<option class="taille" value="3">3 personnes</option>
-				<option class="taille" value="3">4 personnes</option>
-				<option class="taille" value="3">5 personnes</option>
-				<option class="taille" value="3">6 personnes</option>
+				<option class="taille" value="4">4 personnes</option>
+				<option class="taille" value="5">5 personnes</option>
+				<option class="taille" value="6">6 personnes</option>
 			</select>
-			<form method="get" action="{{ action('CartController@create') }}">
+			
 				<input id="prodId" name="prodId" type="hidden" value="{{ $product->id }}">
 			 	<input type="submit" class="basket" value="Je Pars en voyage zge">
 			</form>
@@ -52,20 +53,22 @@
 			<div id="price">{{ $product->price }} €</div>
 			<p class="font">{{ $product->description }}
 			</p>
-			<label>Choisissez le nombre de personnes : </label> <select
-				class="browser-default">
+			
+			<label>Choisissez le nombre de personnes : </label> 
+			<select class="browser-default" name="nbpers" id="nbpers" form="carform">
 				<option class="taille" value="">Plus on est de fous, plus on rit :)</option>
 				<option class="taille" value="1">1 personne</option>
 				<option class="taille" value="2">2 personnes</option>
 				<option class="taille" value="3">3 personnes</option>
-				<option class="taille" value="3">4 personnes</option>
-				<option class="taille" value="3">5 personnes</option>
-				<option class="taille" value="3">6 personnes</option>
+				<option class="taille" value="4">4 personnes</option>
+				<option class="taille" value="5">5 personnes</option>
+				<option class="taille" value="6">6 personnes</option>
 			</select>
-			 <form method="get" action="{{ action('CartController@create') }}">
+			<form method="get" id="carform" action="{{ action('CartController@create') }}">
 				<input id="prodId" name="prodId" type="hidden" value="{{ $product->id }}">
 			 	<input type="submit" class="basket" value="Je Pars en voyage zge">
 			</form>
+			 
 			 
 			  
 			 
