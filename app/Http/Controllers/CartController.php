@@ -36,7 +36,7 @@ class CartController extends Controller
             'user_id' => $user['id'],
             'nbpers' => $nbpers,
             
-        ]);
+        ]);                 
         $id = DB::getPdo()->lastInsertId();
         return redirect()->action('CartController@show', ['id'=>$id]);
        
@@ -65,11 +65,12 @@ class CartController extends Controller
                     ->where('cart_id', $id)
                     ->join('products','product_id','=','products.id')
                     ->join('users','user_id','=','users.id')
-                    ->select('product_name', 'name', 'firstname', 'address', 'price', 'city', 'country')
+                    ->select('product_name', 'img', 'name', 'firstname', 'address', 'price', 'city', 'country', 'nbpers')
                     ->get();
         
-        
-       return view('cart' , ['cart'=>$cart]);
+                    
+
+      return view('cart' , ['cart'=>$cart]);
     }
 
     /**

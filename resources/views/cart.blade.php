@@ -6,7 +6,7 @@
 @foreach ($cart->slice(0,1) as $cart)
    <div class="col s4">
      <div class="card1 card-panel">
-       <img src="{{ asset('img/rando1.svg') }}" alt="">
+       <img src="../{{ $cart->img }}" alt="">
        <span class="info"> {{ $cart->product_name }}
        </span>
        <span class="info2">
