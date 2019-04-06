@@ -29,7 +29,10 @@
 				<option class="taille" value="3">5 personnes</option>
 				<option class="taille" value="3">6 personnes</option>
 			</select>
-			 <button class="basket">Je pars en voyage</button>
+			<form method="get" action="{{ action('CartController@create') }}">
+				<input id="prodId" name="prodId" type="hidden" value="{{ $product->id }}">
+			 	<input type="submit" class="basket" value="Je Pars en voyage zge">
+			</form>
 			 
 			  
 			 
@@ -59,7 +62,10 @@
 				<option class="taille" value="3">5 personnes</option>
 				<option class="taille" value="3">6 personnes</option>
 			</select>
-			 <button class="basket">Je pars en voyage</button>
+			 <form method="get" action="{{ action('CartController@create') }}">
+				<input id="prodId" name="prodId" type="hidden" value="{{ $product->id }}">
+			 	<input type="submit" class="basket" value="Je Pars en voyage zge">
+			</form>
 			 
 			  
 			 
