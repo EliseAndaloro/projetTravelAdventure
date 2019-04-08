@@ -60,6 +60,9 @@ nav>a {
 #slide3 {
     background-image: url(../img/fond3.svg);
     background-repeat : no-repeat;
+		background-attachment: fixed;
+    background-position: center;
+		    background-size: cover;
     height: 500px;
 }
 
