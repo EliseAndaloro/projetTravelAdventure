@@ -34,6 +34,10 @@ Route::get('/cart', function () {
     return view('cart');
 });
 
+Route::get('/avis', function () {
+    return view('avis');
+});
+
 Route::get('/addproduct', function () {
     return view('addproduct');
 });
@@ -43,6 +47,3 @@ Route::get('product/{product}/destroy', 'ProductController@destroy');
 
 Route::get('/{name}', 'ProductController@index')->where('name','[A-Za-z]+');
 Route::get('/produit/{id}', 'ProductController@show')->where('id','[0-9]+');
-        
-
-        
