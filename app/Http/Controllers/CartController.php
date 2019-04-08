@@ -70,7 +70,7 @@ class CartController extends Controller
         
         $cart->total=$cart->price * $cart->nbpers;
         
-     return view('cart' , ['cart'=>$cart]);
+        return view('cart' , ['cart'=>$cart]);
     }
 
     /**
