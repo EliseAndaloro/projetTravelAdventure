@@ -45,4 +45,5 @@ Route::get('/{name}', 'ProductController@index')->where('name','[A-Za-z]+');
 Route::get('/produit/{id}', 'ProductController@show')->where('id','[0-9]+');
         
 Route::resource('cart', 'CartController');
+Route::get('home' , 'CartController@cart');
         

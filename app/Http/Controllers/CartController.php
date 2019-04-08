@@ -38,7 +38,8 @@ class CartController extends Controller
             
         ]);                 
         $id = DB::getPdo()->lastInsertId();
-        return redirect()->action('CartController@show', ['id'=>$id]);
+        
+        return redirect()->action('CartController@cart', ['id'=>$id]);
        
     }
 
@@ -65,7 +66,7 @@ class CartController extends Controller
                     ->where('cart_id', $id)
                     ->join('products','product_id','=','products.id')
                     ->join('users','user_id','=','users.id')
-                    ->select('product_name', 'img', 'name', 'firstname', 'address', 'price', 'city', 'country', 'nbpers')
+                    ->select('cart_id','product_name', 'img', 'name', 'firstname', 'address', 'price', 'city', 'country', 'nbpers', 'description')
                     ->first();
         
         $cart->total=$cart->price * $cart->nbpers;
@@ -73,6 +74,24 @@ class CartController extends Controller
         return view('cart' , ['cart'=>$cart]);
     }
 
+    public function cart()
+    {
+        $id = DB::table('cart')
+                ->select('cart_id')
+                ->first();
+       
+
+        $cart=DB::table('cart')
+        ->where('cart_id', $id)
+        ->join('products','product_id','=','products.id')
+        ->join('users','user_id','=','users.id')
+        ->select('cart_id','product_name', 'img', 'name', 'firstname', 'address', 'price', 'city', 'country', 'nbpers', 'description')
+        ->first();
+        
+        $cart->total=$cart->price * $cart->nbpers;
+        
+        return view('home' , ['cart'=>$cart]);
+    }
     /**
      * Show the form for editing the specified resource.
      *
@@ -91,9 +110,10 @@ class CartController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id)
     {
-        //
+
+ //
     }
 
     /**

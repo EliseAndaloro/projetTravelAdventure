@@ -44,25 +44,32 @@
           <a href="#" class="monpanier">MON PANIER</a>
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
       <div>
+      @if(isset($cart))
+     
       <div class="card" >
 				<div class="card-image waves-effect waves-block waves-light">
-					<img class="activator" src="{{ asset('img/rando1.svg') }}">
+					<img class="activator" src="../{{ $cart->img }}">
 				</div>
 				<div class="card-content">
-					<span class="card-title activator grey-text text-darken-4">test<i class="material-icons right">more_vert</i>
+					<span class="card-title activator grey-text text-darken-4">{{ $cart->product_name }}<i class="material-icons right">more_vert</i>
 					</span>
 
 				</div>
 				<div class="card-reveal">
-					<span class="card-title grey-text text-darken-4">test<i class="material-icons right">close</i>
+					<span class="card-title grey-text text-darken-4">{{ $cart->product_name }}<i class="material-icons right">close</i>
 					</span>
-					<p>blablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablablabla</p>
+					<p>{{ $cart->description }}</p>
 				</div>
 			</div>
 
       </div>
+      <form method="get" id="carform" action="{{ action('CartController@show', $cart->cart_id) }}">
+				
+			 	<input type="submit" class="basket" value="Je Pars en voyage zge">
+	  </form>
       <a class="validerPanier" name="button" href="{{ url('/cart') }}">Je Commande !</a>
 
+@endif
 
     </div>
 

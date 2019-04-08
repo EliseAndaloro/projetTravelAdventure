@@ -66,6 +66,7 @@
 			</select>
 			<form method="get" id="carform" action="{{ action('CartController@create') }}">
 				<input id="prodId" name="prodId" type="hidden" value="{{ $product->id }}">
+				
 			 	<input type="submit" class="basket" value="Je Pars en voyage zge">
 			</form>
 			 
