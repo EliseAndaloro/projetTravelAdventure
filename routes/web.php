@@ -34,6 +34,25 @@ Route::get('/cart', function () {
     return view('cart');
 });
 
+// Route::get('/avis', function () {
+//     return view('avis');
+// });
+
+Route::resource('avis', 'AvisController');
+
+
+
+// Route::get('/avis', 'AvisController@index');
+//
+// Route::get('/avis', 'AvisController@store');
+Auth::routes();
+
+// Route::middleware('auth')->group(function () {
+//
+//     Route::get('/avis', 'AvisController@create');
+//
+// });
+
 Route::get('/addproduct', function () {
     return view('addproduct');
 });
@@ -43,6 +62,3 @@ Route::get('product/{product}/destroy', 'ProductController@destroy');
 
 Route::get('/{name}', 'ProductController@index')->where('name','[A-Za-z]+');
 Route::get('/produit/{id}', 'ProductController@show')->where('id','[0-9]+');
-        
-
-        

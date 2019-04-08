@@ -7,7 +7,7 @@ $(function () {
 			function(){
 				$(this).attr('src','img/LOGO.svg');
 			})
-	
+
 
 });
 
@@ -20,4 +20,14 @@ function closeNav() {
   document.getElementById("mySidepanel").style.width = "0";
 }
 
+M.AutoInit();
 
+document.addEventListener('DOMContentLoaded', function() {
+	var elems = document.querySelectorAll('.collapsible');
+	var instances = M.Collapsible.init(elems, options);
+});
+  var instance = M.Collapsible.getInstance(elem);
+
+instance.open(3);
+instance.close(3);
+instance.destroy();

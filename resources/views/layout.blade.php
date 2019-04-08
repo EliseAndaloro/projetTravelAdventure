@@ -16,7 +16,7 @@
   			<a class="nav-item nav-link " href="/projetTravelAdventure/public/">ACCUEIL</a>
   			<a class="nav-item nav-link" href="{{ url('/sejour') }}">SEJOUR</a>
   			<a class="nav-item nav-link" href="{{ url('/weekend') }}">WEEK-END</a>
-  			<a class="nav-item nav-link" href="" ><img src="{{ asset('img/LOGO.svg') }}" id="logo"></a>
+  			<a class="nav-item nav-link" href="{{ url('/avis') }}" ><img src="{{ asset('img/LOGO.svg') }}" id="logo"></a>
   			<a class="nav-item nav-link" href="{{ url('/randonne') }}">RANDONNÉE</a>
   			 @guest
   			<a class="nav-item nav-link" href="{{ url('/compte') }}">MON COMPTE</a>
@@ -70,7 +70,7 @@
 
         <div>
             @yield('content')
-        
+
 		</div>
 
 
@@ -86,7 +86,7 @@
             	<img src="{{ asset('img/insta.svg') }}" class="reseau">
             </div>
 		</footer>
-       
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script type="text/javascript" src=" {{ asset('js/app.js') }} "></script>
         <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
