@@ -66,11 +66,11 @@ class CartController extends Controller
                     ->join('products','product_id','=','products.id')
                     ->join('users','user_id','=','users.id')
                     ->select('product_name', 'img', 'name', 'firstname', 'address', 'price', 'city', 'country', 'nbpers')
-                    ->get();
+                    ->first();
         
-                    
-
-      return view('cart' , ['cart'=>$cart]);
+        $cart->total=$cart->price * $cart->nbpers;
+        
+     return view('cart' , ['cart'=>$cart]);
     }
 
     /**

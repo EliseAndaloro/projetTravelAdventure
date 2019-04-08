@@ -3,7 +3,7 @@
 @section ('content')
 <link rel="stylesheet" href="{{ asset('css/cart.css') }}">
 <div class="row">
-@foreach ($cart->slice(0,1) as $cart)
+
    <div class="col s4">
      <div class="card1 card-panel">
        <img src="../{{ $cart->img }}" alt="">
@@ -12,20 +12,20 @@
        <span class="info2">
        </span>
        <br>
-       <span class="info"> Prix/personne
+       <span class="info"> Prix/personne:
        </span>
-       <span class="info2"> {{ $cart->price }}
+       <span class="info2"> {{ $cart->price }} &euro;
        </span>
        <br>
        <span class="info"> Nombre de personne :
        </span>
-       <span class="info2"> {{ $cart->price }}
+       <span class="info2"> {{ $cart->nbpers }}
        </span>
        <div class="ligne">
        </div>
-       <span class="total"> Total à régler
+       <span class="total"> Total à régler:
        </span>
-       <span class="prixtotal"> Total
+       <span class="prixtotal"> {{ $cart->total }} &euro;
        </span>
      </div>
    </div>
@@ -42,17 +42,17 @@
         </p>
         <br>
         <p class="userInfo">
-          adresse {{ $cart->address }}
+          adresse: {{ $cart->address }}
         </p>
         <br>
         <p class="userInfo">
-          ville {{ $cart->city }}
+          ville: {{ $cart->city }}
         </p>
         <br>
         <p class="userInfo">
-          pays {{ $cart->country }}
+          pays: {{ $cart->country }}
         </p>
-@endforeach
+
         <div class="ligne2">
         </div>
         <span class="livraison">
