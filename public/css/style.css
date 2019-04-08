@@ -3,6 +3,8 @@
 
 
 /*********************************** Nav Footer ******************************************/
+
+
 .header {
 	position:fixed;
 	top:0;
@@ -14,7 +16,9 @@ nav>a {
   text-transform: uppercase;
   font-family: 'Baloo Chettan', cursive;
     font-weight: bold;
+
 }
+
 
 
 #footer_content {

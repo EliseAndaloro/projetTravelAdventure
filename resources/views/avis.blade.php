@@ -9,30 +9,31 @@
       <div class="title collapsible-header"><i class="material-icons">favorite_border</i><p class="titre">Laisse ton avis</p></div>
       <div class="collapsible-body">
         <div class="row">
-    <form class="col s12">
+    <form class="col s12" method="POST" action="{{ route('avis.store') }}">
+        {{ csrf_field() }}
       <div class="row">
         <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate">
+          <input name="name" id="first_name" type="text" class="validate">
           <label for="first_name">Nom / Prénom</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">textsms</i>
-          <input  id="disabled" type="text" class="validate">
+          <input  name="avis" id="disabled" type="text" class="validate">
           <label for="disabled">Avis</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="password" class="validate">
+          <input name="img" id="password" class="validate">
           <label for="password">Je poste une photo</label>
           <input class="input" type="file" id="file" name="img" multiple>
         </div>
       </div>
-      </div>
-    </form>
-    <button class="laissezAvis">Je poste mon avis !</button>
+    </div>
+    <input name="add" type="submit" class="laissezAvis" value="Je poste un avis"></input>
+  </form>
   </div>
 
       </div>
@@ -40,20 +41,21 @@
   </ul>
 </div>
 
+<div class="row" style="width:95%;">
+
+	@foreach($avis as $avis)
+
+<div class="col s12">
 <div class="wrap">
-<div class="tile" style="background-image: url(img/sejour1.svg)">
+<div class="tile" style="background-image: url({{ $avis->img }})">
   <div class="chip">
-    <img class="profil" src="img/insta.svg" width="5px" height="10px;">
-    Jane Doe
+    <img class="profil" src="img/insta.svg">
+    {{ $avis-> name}}
   </div>
-  <!-- <img src='img/rando2.svg'/> -->
+
   <div class="text">
 
-  <p class="animate-text">"Trop cool je me suis éclatéTrop cool je me suis éclaté
-    Trop cool je me suis éclaté
-    Trop cool je me suis éclaté
-    Trop cool je me suis éclaté
-    Trop cool je me suis éclaté"</p>
+  <p class="animate-text">" {{ $avis->avis }}"</p>
 
 <div class="dots">
     <span></span>
@@ -62,11 +64,12 @@
   </div>
   </div>
  </div>
+</div>
+</div>
+ @endforeach
+</div>
+</div>
 
 
-  <!-- <div class="chip">
-    <img src="images/yuna.jpg" alt="Contact Person">
-    Jane Doe
-  </div> -->
 <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
 @endsection

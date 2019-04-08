@@ -34,9 +34,24 @@ Route::get('/cart', function () {
     return view('cart');
 });
 
-Route::get('/avis', function () {
-    return view('avis');
-});
+// Route::get('/avis', function () {
+//     return view('avis');
+// });
+
+Route::resource('avis', 'AvisController');
+
+
+
+// Route::get('/avis', 'AvisController@index');
+//
+// Route::get('/avis', 'AvisController@store');
+Auth::routes();
+
+// Route::middleware('auth')->group(function () {
+//
+//     Route::get('/avis', 'AvisController@create');
+//
+// });
 
 Route::get('/addproduct', function () {
     return view('addproduct');
