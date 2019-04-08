@@ -17,7 +17,7 @@
 				</div>
 				<div class="card-content">
 					<span class="test card-title activator grey-text text-darken-4">{{
-						$product->name }}<i class="material-icons right">more_vert</i>
+						$product->product_name }}<i class="material-icons right">more_vert</i>
 					</span>
 					<p>
 
