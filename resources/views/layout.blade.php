@@ -77,14 +77,14 @@
 
 
 
-		<footer id="footer_content">
-			<span>© 2019 Mémé & Lisnou</span>
+		<footer>
+			<span id="copyright">© 2019 Mémé & Lisnou</span>
 
-            <div class="grey-text text-lighten-4 right" href="#">
+            <div class="icons">
             	<img src="{{ asset('img/facebook.svg') }}" class="reseau">
             	<img src="{{ asset('img/twitter.svg') }}" class="reseau">
             	<img src="{{ asset('img/insta.svg') }}" class="reseau">
-            </div>
+           </div>
 		</footer>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
