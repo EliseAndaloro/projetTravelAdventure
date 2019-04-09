@@ -15,7 +15,7 @@
                         <div class="form-group">
                             <label for="name" class="col-md-4 control-label">Nom</label>
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" required autofocus>
+                                <input id="product_name" type="text" class="form-control" name="product_name" required autofocus>
                             </div>
                         </div>
                         <div class="form-group">

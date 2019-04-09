@@ -6,19 +6,19 @@
 
 	<div id="mongolfiere2"></div>
 
-	<a class="waves-effect waves-light btn" id="button">voir les randonnées</a>
+	<a class="waves-effect waves-light btn" id="button" href="{{ url('/randonne') }}">voir les randonnées</a>
 			
 </div>
 
 
 <div id="slide2">
 
-	<a class="waves-effect waves-light btn" id="button2">voir les weekend</a>
+	<a class="waves-effect waves-light btn" id="button2" href="{{ url('/sejour') }}">voir les séjours</a>
 	
 </div>
 
 <div id="slide3">
-
+	<a class="waves-effect waves-light btn" id="button3" href="{{ url('/weekend') }}">voir les weekends</a>
 	</div>
 
 @endsection
