@@ -218,12 +218,35 @@ nav>a {
 	transform: scale(1.03);
 }
 
-******************/*text page accueil*/****************
+/**************************************text page accueil********************************************/
 
-.textWeek {
+.text {
 	font-family: 'Baloo Chettan', cursive;
-		margin-left: 42px;
 		font-size: 30px;
 		color: #f28e79;
 		margin-top: 130px;
+		width: 900px;
+		text-align:center;
+		position: relative;
+		display:block;
+		top:90px;
+		
+		
 }
+
+.titleslide1{
+	font-size : 50px;
+	letter-spacing: 15px;
+	display:block;
+	position: absolute;
+	top: 10px;
+	
+}
+
+.textslide1{
+	position: relative;
+	align-content:center;
+
+}
+
+

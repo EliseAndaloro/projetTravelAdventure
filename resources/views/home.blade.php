@@ -7,6 +7,11 @@
 	<div id="mongolfiere2"></div>
 
 	<a class="waves-effect waves-light btn" id="button">voir les randonnées</a>
+	<div class="textslide1">
+	<h3 class="titleslide1">LONG FOREST ADVENTURE</h3>
+	<p class="text"> <em>"L'unique moyen de savoir jusqu'où l'on peut aller, 
+		c'est de se mettre en route et de marcher." Henri Bergson</em></p>
+	</div>
 </div>
 
 
