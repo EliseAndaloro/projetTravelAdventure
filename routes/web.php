@@ -30,9 +30,9 @@ Route::get('/inscription', function () {
 });
 
 Route::resource('product', 'ProductController');
-Route::get('/cart', function () {
-    return view('cart');
-});
+// Route::get('/cart', function () {
+//     return view('cart');
+// });
 
 Route::get('/addproduct', function () {
     return view('addproduct');
@@ -45,5 +45,5 @@ Route::get('/{name}', 'ProductController@index')->where('name','[A-Za-z]+');
 Route::get('/produit/{id}', 'ProductController@show')->where('id','[0-9]+');
         
 Route::resource('cart', 'CartController');
-Route::get('home' , 'CartController@cart');
+// Route::get('home' , 'CartController@cart');
         
