@@ -70,9 +70,10 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
+    {   
+        $user = Auth::user();
         $product = Product::where('id', $id)->get();
-        return view('detailsproduits', ['product' => $product]);
+        return view('detailsproduits', ['product' => $product], ['user'=>$user]);
     }
 
     /**

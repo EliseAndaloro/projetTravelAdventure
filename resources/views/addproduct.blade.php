@@ -13,7 +13,7 @@
                         {{ csrf_field() }}
 <!--                         securisation -->
                         <div class="form-group">
-                            <label for="name" class="col-md-4 control-label">Nom</label>
+                            <label for="product_name" class="col-md-4 control-label">Nom</label>
                             <div class="col-md-6">
                                 <input id="product_name" type="text" class="form-control" name="product_name" required autofocus>
                             </div>
