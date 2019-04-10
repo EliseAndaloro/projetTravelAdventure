@@ -4,8 +4,16 @@
 <link rel="stylesheet" href="css/categorie.css">
 
 <div>
-test
-
+	<div class="logoSociaux fixed-action-btn">
+	  <a class="btn-floating btn-large">
+	    <i class="large material-icons">share</i>
+	  </a>
+	  <ul>
+	    <li><a class="btn-floating"><img class="" src="{{ asset('img/insta.svg') }}"></a></li>
+	    <li><a class="btn-floating"><img class="" src="{{ asset('img/facebook.svg') }}"></a></li>
+	    <li><a class="btn-floating"><img class="" src="{{ asset('img/twitter.svg') }}"></a></li>
+	  </ul>
+	</div>
 </div>
 
 <div class="b row" style="width:1000px;">
@@ -52,5 +60,5 @@ test
 </div>
 
 
-
+<script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
  @endsection

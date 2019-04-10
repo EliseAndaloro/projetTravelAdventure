@@ -31,3 +31,10 @@ document.addEventListener('DOMContentLoaded', function() {
 instance.open(3);
 instance.close(3);
 instance.destroy();
+
+document.addEventListener('DOMContentLoaded', function() {
+	 var elems = document.querySelectorAll('.fixed-action-btn');
+	 var instances = M.FloatingActionButton.init(elems, {
+		 direction: 'bottom'
+	 });
+ });
