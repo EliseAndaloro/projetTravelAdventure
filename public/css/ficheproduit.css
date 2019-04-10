@@ -2,18 +2,20 @@
 #body {
 	background-color: #e0ead5;
 	padding-top: 130px;
-;
+	padding-bottom: 5.5%;
+
 }
 .contenu{
 	background-color: #FFF;
   width: 1000px;
-  height: 400px;
+  height: 420px;
 	border-radius: 8px;
  box-shadow: 0px 0px 29px rgba(153, 153, 153, 0.6);
  -webkit-box-shadow: 0px 0px 29px rgba(153, 153, 153, 0.6);
  -moz-box-shadow: 0px 0px 29px rgba(153, 153, 153, 0.6);
 	margin-left: 170px;
 	z-index: 2;
+
 }
 .materialboxed{
 	height:300px;
