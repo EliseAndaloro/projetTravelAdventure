@@ -21,9 +21,22 @@ nav>a {
 
 }
 
-.navlien {
-
+#deconnexion {
+	margin-top: -6.5%;
+	background-color:  #e9f2de ;
+	text-transform: uppercase;
+	font-family: 'Baloo Chettan', cursive;
+	font-weight: bold;
 }
+
+#deconnexion:hover{
+	background-color:  #e9f2de !important;
+}
+
+#deconnexion a {
+	color:#4b515b;
+}
+
 
 
 footer {
@@ -240,6 +253,8 @@ footer {
 	color: #FFF;
 	letter-spacing: 1.98px;
 	text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
 
 
 }
