@@ -6,6 +6,7 @@
 
 
 .header {
+
 	position:fixed;
 	top:0;
 	background: #cad8ba;
@@ -13,12 +14,16 @@
 }
 
 nav>a {
+	display:inline-flex;
   text-transform: uppercase;
   font-family: 'Baloo Chettan', cursive;
-    font-weight: bold;
+  font-weight: bold;
 
 }
 
+.navlien {
+
+}
 
 
 footer {
@@ -81,7 +86,7 @@ footer {
 }
 
 #mongolfiere1{
-    widht: 200px;
+    width: 200px;
     height: 250px;
     margin-left : 75px;
     position: relative;

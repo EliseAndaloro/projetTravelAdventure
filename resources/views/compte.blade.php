@@ -1,6 +1,6 @@
 @extends ('layout') @section ('content')
-<link rel="stylesheet" href="../css/compte.css">
-<img src="../img/connexion.svg"
+<link rel="stylesheet" href="{{asset('css/compte.css')}}">
+<img src="{{ asset('img/connexion.svg') }}"
 	style="margin-top: 100px; width: 300px; height: 250px; margin-left: 39%; margin-right: 39%;">
 <div class="container">
 	<div class="row justify-content-center">
@@ -43,7 +43,7 @@
 							<button type="submit" class="login" style="margin-bottom: 15px;">
 								{{ __('Login') }}</button>
 <!-- 							<button class="login"> -->
-								<a class="inscrit" href="inscription">Je m'inscris</a>
+								<a class="inscrit" href="{{ url('/inscription') }}">Je m'inscris</a>
 <!-- 							</button> -->
 						</div>
 					</form>

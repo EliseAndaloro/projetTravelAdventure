@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width" />
         <title>Travel Adventure</title>
         <link rel="stylesheet" href=" {{ asset('css/app.css') }} ">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -11,19 +11,20 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
+      
         <header>
 		<nav class="header nav nav-pills nav-fill" id="main">
-  			<a class="nav-item nav-link " href="/projetTravelAdventure/public/">ACCUEIL</a>
-  			<a class="nav-item nav-link" href="{{ url('/randonne') }}">RANDONNÉE</a>
-  			<a class="nav-item nav-link" href="{{ url('/sejour') }}">SEJOUR</a>
-  			<a class="nav-item nav-link" href="{{ url('/avis') }}" ><img src="{{ asset('img/LOGO.svg') }}" id="logo"></a>
-  			<a class="nav-item nav-link" href="{{ url('/weekend') }}">WEEK-END</a>
+  			<a class="navlien nav-item nav-link " href="/projetTravelAdventure/public/">ACCUEIL</a>
+  			<a class="navlien nav-item nav-link" href="{{ url('/randonne') }}">RANDONNÉE</a>
+  			<a class="navlien nav-item nav-link" href="{{ url('/sejour') }}">SEJOUR</a>
+  			<a class="navlien nav-item nav-link" href="{{ url('/avis') }}" ><img src="{{ asset('img/LOGO.svg') }}" id="logo"></a>
+  			<a class="navlien nav-item nav-link" href="{{ url('/weekend') }}">WEEK-END</a>
 
 
   			 @guest
-  			<a class="nav-item nav-link" href="{{ url('/compte') }}">MON COMPTE</a>
+  			<a class="navlien nav-item nav-link" href="{{ url('/compte') }}">MON COMPTE</a>
   			@else
-  				 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+  				 <a id="navbarDropdown" class=" =navlien nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
@@ -39,7 +40,7 @@
                                     </form>
                                 </div>
             @endguest
-  			<a class="openbtn nav-item nav-link" onclick="openNav()"><i class="small material-icons">card_travel</i></a>
+  			<a class="navlien openbtn nav-item nav-link" onclick="openNav()"><i class="small material-icons">card_travel</i></a>
 		</nav>
 
     <div id="mySidepanel" class="sidepanel">
@@ -47,7 +48,7 @@
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
       <div>
       @if(isset($cart))
-     
+
       <div class="card" >
 				<div class="card-image waves-effect waves-block waves-light">
 					<img class="activator" src="{{ asset( $cart->img ) }}">
@@ -66,10 +67,10 @@
 
       </div>
       <form method="get" id="carform" action="{{ action('CartController@show', $cart->cart_id) }}">
-				
+
 			 	<input type="submit" class="validerPanier" value="Je Pars en voyage ">
 	  </form>
-      
+
 
 @endif
 
