@@ -17,15 +17,18 @@ class ProductController extends Controller
      */
     public function index($name)
     {
+        $user = Auth::user();
+
         $products = Product::where('categorie',$name)->get();
-        
-      
-        return view('categorie')->withProducts($products);     
-           
-        
-        
-        
-        
+        return view('categorie', ['user'=>$user])->withProducts($products);
+
+
+        // return view('categorie')->withProducts($products);
+
+
+
+
+
     }
 
     /**
@@ -36,7 +39,7 @@ class ProductController extends Controller
     public function create()
     {
         $user = Auth::user();
-        
+
         if($user->is_admin == 1){
             return view('admin');
         }
@@ -70,7 +73,7 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {   
+    {
         $user = Auth::user();
         $product = Product::where('id', $id)->get();
         return view('detailsproduits', ['product' => $product], ['user'=>$user]);
@@ -85,7 +88,7 @@ class ProductController extends Controller
     public function edit(Product $product)
     {
         $user = Auth::user();
-        
+
         if($user->is_admin == 1){
             return view('editproduct', compact('product'));
         }

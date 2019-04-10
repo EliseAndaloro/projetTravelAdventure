@@ -3,10 +3,23 @@
 @section ('content')
 <link rel="stylesheet" href="css/categorie.css">
 
-<div>test</div>
+<div>
+test
 
-<div class="row" style="width:1000px;">
+</div>
+
+<div class="b row" style="width:1000px;">
 <div class="col">
+	@if(isset($user))
+	@if($user->is_admin == 1 )
+	<div class="add">
+		<p>
+			<a class="btn-floating btn-large waves-effect waves-light" href="{{ url('/addproduct') }}"><i class="material-icons">add</i></a>
+		</p>
+
+	</div>
+	@endif
+	@endif
 	@foreach($products as $product)
 
 <div class="col s4">

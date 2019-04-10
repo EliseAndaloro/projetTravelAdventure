@@ -3,10 +3,11 @@
 
 
 @section('content')
+<link rel="stylesheet" href="{{ asset('css/add.css')}}">
 <div class="container" style="margin-top:100px;">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
+            <div class="addCol panel panel-default">
                 <div class="panel-heading">Créer un article</div>
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('product.store') }}">
@@ -39,7 +40,7 @@
                         <div class="form-group">
                         	<label for="file">image</label>
   							<input type="file" id="file" name="img" multiple>
-                           
+
                         </div>
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
