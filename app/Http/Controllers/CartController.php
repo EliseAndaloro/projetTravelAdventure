@@ -28,20 +28,24 @@ class CartController extends Controller
      */
     public function create()
     {
+        $user = Auth::user();
+        if(isset($user)){
         $product = $_GET['prodId'];
         $nbpers = $_GET['nbpers'];
-        $user = Auth::user();
         Cart::create([
             'product_id' =>$product,
             'user_id' => $user['id'],
             'nbpers' => $nbpers,
-            
-        ]);                 
+
+        ]);
         $id = DB::getPdo()->lastInsertId();
-        
+
         return redirect()->action('CartController@cart', ['id'=>$id , 'product' =>$product]);
-        
-       
+      }
+      else{
+        return view('../compte');
+      }
+
     }
 
     /**
@@ -69,24 +73,24 @@ class CartController extends Controller
                     ->join('users','user_id','=','users.id')
                     ->select('cart_id','product_name', 'img', 'name', 'firstname', 'address', 'price', 'city', 'country', 'nbpers', 'description')
                     ->first();
-        
+
         $cart->total=$cart->price * $cart->nbpers;
-        
+
         return view('cart' , ['cart'=>$cart]);
     }
 
     public function cart($id, Product $product)
     {
-       
+
         $cart=DB::table('cart')
         ->where('cart_id', $id)
         ->join('products','product_id','=','products.id')
         ->join('users','user_id','=','users.id')
         ->select('cart_id','product_name', 'img', 'name', 'firstname', 'address', 'price', 'city', 'country', 'nbpers', 'description')
         ->first();
-        
+
         $cart->total=$cart->price * $cart->nbpers;
-        
+
         return view('home' , ['cart'=>$cart]);
     }
     /**
