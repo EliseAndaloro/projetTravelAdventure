@@ -20,7 +20,10 @@
 			<p class="font">{{ $product->description }}
 			</p>
 			<form method="get" action="{{ action('CartController@create') }}">
-			<label>Choisissez le nombre de personnes : </label>
+					<label for="start">Date de départ : </label> 
+					<input type="date" id="start" name="trip-start" value="2019-04-10" min="2019-04-10"
+						max="2050-12-31">
+			 <label>Choisissez le nombre de personnes : </label>
 			<select class="browser-default" name="nbpers" id="nbpers">
 				<option class="taille" value="">Plus on est de fous, plus on rit :)</option>
 				<option class="taille" value="1">1 personne</option>
