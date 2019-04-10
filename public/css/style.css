@@ -250,7 +250,7 @@ footer {
 /**************************************text page accueil********************************************/
 
 .text {
-	
+
 		font-size: 25px;
 		color: #f28e79;
 		margin-top: 130px;
@@ -262,8 +262,8 @@ footer {
 		text-transform:uppercase;
 		margin-left: 10%;
 		margin-right:10%;
-		
-		
+
+
 }
 
 .titleslide1{
@@ -275,12 +275,12 @@ footer {
 	font-family: 'Baloo Chettan', cursive;
 	margin-left:10%;
 	margin-right : 10%;
-	
+
 }
 
 .textslide1{
 	position: relative;
-	
+
 }
 
 .textWeek{
@@ -298,17 +298,5 @@ footer {
 
 .textslide2{
 	position: relative;
-	
+
 }
-
-
-
-
-
-
-
-
-
-
-
-

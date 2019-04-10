@@ -18,8 +18,8 @@
   			<a class="nav-item nav-link" href="{{ url('/sejour') }}">SEJOUR</a>
   			<a class="nav-item nav-link" href="{{ url('/avis') }}" ><img src="{{ asset('img/LOGO.svg') }}" id="logo"></a>
   			<a class="nav-item nav-link" href="{{ url('/weekend') }}">WEEK-END</a>
-  			
-  			
+
+
   			 @guest
   			<a class="nav-item nav-link" href="{{ url('/compte') }}">MON COMPTE</a>
   			@else
