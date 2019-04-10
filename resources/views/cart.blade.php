@@ -12,6 +12,11 @@
        <span class="info2">
        </span>
        <br>
+       <span class="info"> Date de départ : 
+       </span>
+       <span class="info2"> {{ $cart->trip_start }}
+       </span>
+       <br>
        <span class="info"> Prix/personne:
        </span>
        <span class="info2"> {{ $cart->price }} &euro;

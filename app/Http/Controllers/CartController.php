@@ -32,9 +32,11 @@ class CartController extends Controller
         if(isset($user)){
         $product = $_GET['prodId'];
         $nbpers = $_GET['nbpers'];
+        $date = $_GET['trip-start'];
         Cart::create([
             'product_id' =>$product,
             'user_id' => $user['id'],
+            'trip_start' => $date,
             'nbpers' => $nbpers,
 
         ]);
@@ -71,7 +73,7 @@ class CartController extends Controller
                     ->where('cart_id', $id)
                     ->join('products','product_id','=','products.id')
                     ->join('users','user_id','=','users.id')
-                    ->select('cart_id','product_name', 'img', 'name', 'firstname', 'address', 'price', 'city', 'country', 'nbpers', 'description')
+                    ->select('cart_id','trip_start','product_name', 'img', 'name', 'firstname', 'address', 'price', 'city', 'country', 'nbpers', 'description')
                     ->first();
 
         $cart->total=$cart->price * $cart->nbpers;

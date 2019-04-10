@@ -8,7 +8,7 @@ class Cart extends Model
 {
     protected $table = 'cart';
     
-    protected $fillable = ['cart_id', 'product_id', 'user_id', 'nbpers'];
+    protected $fillable = ['cart_id', 'product_id', 'user_id', 'trip_start', 'nbpers'];
     
     public $timestamps = false;
 }
