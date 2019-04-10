@@ -32,8 +32,8 @@
 			</select>
 
 				<input id="prodId" name="prodId" type="hidden" value="{{ $product->id }}">
-			 	<input type="submit" class="basket" value="Je Pars en voyage">
-
+				
+			 	<input type="submit" class="basket" value="Je Pars en voyage zge">
 			</form>
 		</div>
 		@if(isset($user))
