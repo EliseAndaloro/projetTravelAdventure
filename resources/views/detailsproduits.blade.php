@@ -32,12 +32,20 @@
 			</select>
 
 				<input id="prodId" name="prodId" type="hidden" value="{{ $product->id }}">
-				
+
 			 	<input type="submit" class="basket" value="Je Pars en voyage zge">
 			</form>
 		</div>
 		@if(isset($user))
 		@if($user->is_admin == 1 )
+		<form class="form-horizontal" method="POST"
+			action="{{ route('product.destroy', $product->id) }}">
+			{{ csrf_field() }} {{ method_field('DELETE') }}
+			<a class="btn btn-primary" data-toggle="collapse"
+				href="#collapseExample" role="button" aria-expanded="false"
+				aria-controls="collapseExample"><i class="small material-icons">delete</i></a>
+
+		</form>
 			<div class="edit">
 				<p>
 					<a class="btn btn-primary" data-toggle="collapse"
@@ -46,6 +54,7 @@
 				</p>
 
 							</div>
+
 						</div>
 
 					</div>
