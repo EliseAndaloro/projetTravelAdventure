@@ -39,7 +39,8 @@ class CartController extends Controller
         ]);                 
         $id = DB::getPdo()->lastInsertId();
         
-        return redirect()->action('CartController@cart', ['id'=>$id]);
+        return redirect()->action('CartController@cart', ['id'=>$id , 'product' =>$product]);
+        
        
     }
 
@@ -74,13 +75,9 @@ class CartController extends Controller
         return view('cart' , ['cart'=>$cart]);
     }
 
-    public function cart()
+    public function cart($id, Product $product)
     {
-        $id = DB::table('cart')
-                ->select('cart_id')
-                ->first();
        
-
         $cart=DB::table('cart')
         ->where('cart_id', $id)
         ->join('products','product_id','=','products.id')

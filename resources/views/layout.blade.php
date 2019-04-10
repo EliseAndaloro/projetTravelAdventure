@@ -48,7 +48,7 @@
      
       <div class="card" >
 				<div class="card-image waves-effect waves-block waves-light">
-					<img class="activator" src="../{{ $cart->img }}">
+					<img class="activator" src="{{ asset( $cart->img ) }}">
 				</div>
 				<div class="card-content">
 					<span class="card-title activator grey-text text-darken-4">{{ $cart->product_name }}<i class="material-icons right">more_vert</i>
@@ -65,9 +65,9 @@
       </div>
       <form method="get" id="carform" action="{{ action('CartController@show', $cart->cart_id) }}">
 				
-			 	<input type="submit" class="basket" value="Je Pars en voyage zge">
+			 	<input type="submit" class="validerPanier" value="Je Pars en voyage ">
 	  </form>
-      <a class="validerPanier" name="button" href="{{ url('/cart') }}">Je Commande !</a>
+      
 
 @endif
 
