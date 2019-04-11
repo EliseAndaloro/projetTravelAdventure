@@ -2,6 +2,7 @@
 
 @section('content')
 	<link rel="stylesheet" href="css/compte.css">
+	
 <div class="container" style="margin-top:130px">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -25,7 +26,7 @@
                                 @endif
                             </div>
                         </div>
-                        
+
                          <div class="form-group row">
                             <label for="firstname" class="col-md-4 col-form-label text-md-right">{{ __('Prénom') }}</label>
 
@@ -39,7 +40,7 @@
                                 @endif
                             </div>
                         </div>
-                        
+
                         <div class="form-group row">
                             <label for="address" class="col-md-4 col-form-label text-md-right">{{ __('Adresse') }}</label>
 
@@ -53,7 +54,7 @@
                                 @endif
                             </div>
                         </div>
-                        
+
                         <div class="form-group row">
                             <label for="city" class="col-md-4 col-form-label text-md-right">{{ __('Ville') }}</label>
 
@@ -67,7 +68,7 @@
                                 @endif
                             </div>
                         </div>
-                        
+
                         <div class="form-group row">
                             <label for="country" class="col-md-4 col-form-label text-md-right">{{ __('Pays') }}</label>
 

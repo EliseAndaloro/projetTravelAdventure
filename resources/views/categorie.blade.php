@@ -3,13 +3,33 @@
 @section ('content')
 <link rel="stylesheet" href="css/categorie.css">
 
-<div>
-test
 
+<div>
+	@foreach($products as $product)
+	@if ($product->categorie == 'randonne')
+	<img class="logoCat fixed-action-btn" src="{{asset('img/randon.svg')}}" width="200px;" height="200px;">
+	@elseif ($product->categorie == 'weekend' ) 
+	<img class="logoCat fixed-action-btn" src="{{asset('img/insta.svg')}}" width="200px;" height="200px;">
+	@elseif($product->categorie == 'sejour')
+	<img class="logoCat fixed-action-btn" src="{{asset('img/facebook.svg')}}" width="200px;" height="200px;">
+	@endif
+	@endforeach
+	<div class="logoSociaux fixed-action-btn">
+	  <a class="btn-floating btn-large">
+	    <i class="large material-icons">share</i>
+	  </a>
+	  <ul>
+	    <li><a class="btn-floating"><img class="" src="{{ asset('img/insta.svg') }}"></a></li>
+	    <li><a class="btn-floating"><img class="" src="{{ asset('img/facebook.svg') }}"></a></li>
+	    <li><a class="btn-floating"><img class="" src="{{ asset('img/twitter.svg') }}"></a></li>
+	  </ul>
+	</div>
 </div>
 
 <div class="b row" style="width:1000px;">
+
 <div class="col">
+
 	@if(isset($user))
 	@if($user->is_admin == 1 )
 	<div class="add">
@@ -52,5 +72,5 @@ test
 </div>
 
 
-
+<script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
  @endsection

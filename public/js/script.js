@@ -1,16 +1,12 @@
 //Hover logo
-//$(function () {
-//	
-//	$('#logo').hover(
-//			function(){
-//				$(this).attr('src','{{asset("img/flash.svg")}}');
-//			},
-//			function(){
-//				$(this).attr('src','{{asset("img/LOGO.svg")}}');
-//			})
-//
-//
-//});
+$(function () {
+	$('#logo').hover(
+			function(){
+				$(this).attr('src',cheminImg+'/flash.svg');
+			},
+			function(){
+				$(this).attr('src',cheminImg+'/LOGO.svg');
+			})
 
 //sidenav panier
 function openNav() {
@@ -32,3 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
 instance.open(3);
 instance.close(3);
 instance.destroy();
+
+document.addEventListener('DOMContentLoaded', function() {
+	 var elems = document.querySelectorAll('.fixed-action-btn');
+	 var instances = M.FloatingActionButton.init(elems, {
+		 direction: 'bottom'
+	 });
+ });
