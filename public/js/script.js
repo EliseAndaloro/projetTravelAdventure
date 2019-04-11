@@ -7,6 +7,7 @@ $(function () {
 			function(){
 				$(this).attr('src',cheminImg+'/LOGO.svg');
 			})
+});
 
 //sidenav panier
 function openNav() {
