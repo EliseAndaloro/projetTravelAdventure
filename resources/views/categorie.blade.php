@@ -3,7 +3,9 @@
 @section ('content')
 <link rel="stylesheet" href="css/categorie.css">
 
+
 <div>
+	<img class="logoCat fixed-action-btn" src="{{asset('img/randon.svg')}}" width="200px;" height="200px;">
 	<div class="logoSociaux fixed-action-btn">
 	  <a class="btn-floating btn-large">
 	    <i class="large material-icons">share</i>
