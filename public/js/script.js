@@ -1,15 +1,16 @@
 //Hover logo
-$(function () {
-	$('#logo').hover(
-			function(){
-				$(this).attr('src','img/flash.svg');
-			},
-			function(){
-				$(this).attr('src','img/LOGO.svg');
-			})
-
-
-});
+//$(function () {
+//	
+//	$('#logo').hover(
+//			function(){
+//				$(this).attr('src','{{asset("img/flash.svg")}}');
+//			},
+//			function(){
+//				$(this).attr('src','{{asset("img/LOGO.svg")}}');
+//			})
+//
+//
+//});
 
 //sidenav panier
 function openNav() {
