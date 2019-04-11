@@ -18,7 +18,13 @@ nav>a {
   text-transform: uppercase;
   font-family: 'Baloo Chettan', cursive;
   font-weight: bold;
+  max-width : 150px;
+}
 
+#main{
+	width : 100%;
+ 	display: flex;
+	justify-content : space-between !important; 
 }
 
 #deconnexion {
@@ -153,7 +159,7 @@ footer {
 		text-transform: uppercase;
 		color: #FFF;
 		letter-spacing: 1.98px;
-		margin-top: 300px;
+		margin-top: 360px;
 }
 
 #button3{
