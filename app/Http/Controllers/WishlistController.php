@@ -18,18 +18,14 @@ class WishlistController extends Controller
      */
     public function index()
     {
-
-            // $wishlist=DB::table('wishlist')
-            //             ->where('wish_id', $id)
-            //             ->join('products','wishprod_id','=','products.id')
-            //             ->join('users','userwish_id','=','users.id')
-            //             ->select('wish_id','product_name', 'img', 'price', 'description')
-            //             ->first();
-
-
-
-            // return view('wishlist' , ['wishlist'=>$wishlist]);
-            return "sae pute ! ";
+        $user = Auth::user();
+        $wishlist = DB::table('wishlist')
+                    ->where('userwish_id', $user->id)
+                    ->join('products','wishprod_id','=','products.id')
+                    ->join('users','userwish_id','=','users.id')
+                    ->select('product_name', 'description')
+                    ->get();
+        return view('wishlist' , ['wishlist'=>$wishlist]);
     }
 
     /**
@@ -41,7 +37,7 @@ class WishlistController extends Controller
     {
       $user = Auth::user();
       if(isset($user)){
-      $product = $_GET['wishId'];
+      $product = $_GET['wish_product'];
       Wishlist::create([
           'wishprod_id' =>$product,
           'userwish_id' => $user['id'],
@@ -49,8 +45,8 @@ class WishlistController extends Controller
       ]);
 
 
-
-      return redirect()->action('WishlistController@index', ['product' =>$product]);
+       
+      return redirect()->action('WishlistController@index');
 
       // return redirect()->action('WishlistController@show', ['id'=>$id , 'product' =>$product]);
     }

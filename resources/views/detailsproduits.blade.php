@@ -10,13 +10,13 @@
 	@foreach($product as $product)
 
 		<div class="col s1"id="separateur">
-			<img class="materialboxed" width="450" src="../{{ $product->img }}">
+			<img class="materialboxed" width="450" src="{{asset( $product->img )}}">
 		</div>
 
 		<div class="col s1">
 
-			<form method="get" action="{{ action('WishlistController@create') }}">
-			<input id="prodId" name="wishId" type="hidden" value="{{ $product->id }}">
+		<form method="get" action="{{ action('WishlistController@create') }}">
+			<input id="wishId" name="wish_product" type="hidden" value="{{ $product->id }}">
 			<input type="submit" id="onclick" class="love small material-icons" value="favorite_border">
 		</form>
 			<h5 class="font1">{{ $product->product_name }}</h5>

@@ -1,7 +1,7 @@
 @extends ('layout')
 
 @section ('content')
-<link rel="stylesheet" href="css/categorie.css">
+<link rel="stylesheet" href="{{asset('css/categorie.css') }} ">
 
 
 <div>
@@ -36,7 +36,7 @@
 
 			<div class="card" >
 				<div class="card-image waves-effect waves-block waves-light">
-					<img class="activator" src="{{ $product->img }}">
+					<img class="activator" src="{{ asset($product->img) }}">
 				</div>
 				<div class="card-content">
 					<span class="test card-title activator grey-text text-darken-4">{{
@@ -63,5 +63,5 @@
 </div>
 
 
-<script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
+<script type="text/javascript" src="{{asset('js/script.js')}}"></script>
  @endsection
