@@ -45,6 +45,7 @@
 					<p>
 
 					<a class="waves-effect waves-light btn plus" href="produit/{{ $product->id }}">Plus de détails</a>
+					<a class=""><i class="material-icons right">favorite_border</i></a>
 					</p>
 				</div>
 				<div class="card-reveal">

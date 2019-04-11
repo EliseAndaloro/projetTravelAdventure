@@ -32,9 +32,12 @@
 			</select>
 
 				<input id="prodId" name="prodId" type="hidden" value="{{ $product->id }}">
-
-			 	<input type="submit" class="basket" value="Je Pars en voyage zge">
+			 	<input type="submit" class="basket" value="Je Pars en voyage">
 			</form>
+			<form method="get" action="{{ action('WishlistController@create') }}">
+			<input id="prodId" name="wishId" type="hidden" value="{{ $product->id }}">
+			<input type="submit" class="small material-icons" value="favorite_border">
+		</form>
 		</div>
 		@if(isset($user))
 		@if($user->is_admin == 1 )
