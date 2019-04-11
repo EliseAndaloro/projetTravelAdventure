@@ -2,10 +2,10 @@
 $(function () {
 	$('#logo').hover(
 			function(){
-				$(this).attr('src','img/flash.svg');
+				$(this).attr('src',cheminImg+'/flash.svg');
 			},
 			function(){
-				$(this).attr('src','img/LOGO.svg');
+				$(this).attr('src',cheminImg+'/LOGO.svg');
 			})
 
 
