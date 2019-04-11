@@ -7,11 +7,39 @@ $(function () {
 			function(){
 				$(this).attr('src','img/LOGO.svg');
 			})
+
+
 	$( "#onclick" ).click(function() {
 		var text = "favorite";
 			$(this).val(text);
 		});
 
+
+		// $( "#onclick2" ).click(function() {
+		// 	var text = "favorite";
+		// 		$(this).val(text);
+		// 	});
+
+		// 	 $( "input" ).each(function(){
+		//   $( "#onclick2" ).click(function(){
+		// 		if (this.val != "favorite") {
+		// 			this.val = "favorite";
+		// 		}
+		// 		else {
+		// 			this.val = "favorite_border";
+		// 		}
+		//
+		//   });
+		// });
+		$( input ).click(function() {
+		  $( "onclick2" ).each(function( i ) {
+		    if ( this.style.color !== "blue" ) {
+		      this.style.color = "blue";
+		    } else {
+		      this.style.color = "";
+		    }
+		  });
+		});
 
 });
 
