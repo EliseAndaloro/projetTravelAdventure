@@ -5,7 +5,15 @@
 
 
 <div>
+	@foreach($products as $product)
+	@if ($product->categorie == 'randonne')
 	<img class="logoCat fixed-action-btn" src="{{asset('img/randon.svg')}}" width="200px;" height="200px;">
+	@elseif ($product->categorie == 'weekend' ) 
+	<img class="logoCat fixed-action-btn" src="{{asset('img/insta.svg')}}" width="200px;" height="200px;">
+	@elseif($product->categorie == 'sejour')
+	<img class="logoCat fixed-action-btn" src="{{asset('img/facebook.svg')}}" width="200px;" height="200px;">
+	@endif
+	@endforeach
 	<div class="logoSociaux fixed-action-btn">
 	  <a class="btn-floating btn-large">
 	    <i class="large material-icons">share</i>
@@ -19,7 +27,9 @@
 </div>
 
 <div class="b row" style="width:1000px;">
+
 <div class="col">
+
 	@if(isset($user))
 	@if($user->is_admin == 1 )
 	<div class="add">
