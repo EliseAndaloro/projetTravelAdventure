@@ -15,6 +15,10 @@
 
 		<div class="col s1">
 
+			<form method="get" action="{{ action('WishlistController@create') }}">
+			<input id="prodId" name="wishId" type="hidden" value="{{ $product->id }}">
+			<input type="submit" id="onclick" class="love small material-icons" value="favorite_border">
+		</form>
 			<h5 class="font1">{{ $product->product_name }}</h5>
 			<div id="price">{{ $product->price }} €</div>
 			<p class="font">{{ $product->description }}
@@ -34,10 +38,7 @@
 				<input id="prodId" name="prodId" type="hidden" value="{{ $product->id }}">
 			 	<input type="submit" class="basket" value="Je Pars en voyage">
 			</form>
-			<form method="get" action="{{ action('WishlistController@create') }}">
-			<input id="prodId" name="wishId" type="hidden" value="{{ $product->id }}">
-			<input type="submit" class="small material-icons" value="favorite_border">
-		</form>
+
 		</div>
 		@if(isset($user))
 		@if($user->is_admin == 1 )

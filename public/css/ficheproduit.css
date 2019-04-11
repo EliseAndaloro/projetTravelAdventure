@@ -163,3 +163,13 @@ label{
 	color: #f28e79;
 	letter-spacing: 1.98px;
 }
+
+/**********************wishlist********************/
+.love {
+	float: right;
+background: none;
+border: none;
+margin-top: 6%;
+margin-right: 5%;
+color: #f28e79;
+}

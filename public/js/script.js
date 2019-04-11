@@ -7,6 +7,10 @@ $(function () {
 			function(){
 				$(this).attr('src','img/LOGO.svg');
 			})
+	$( "#onclick" ).click(function() {
+		var text = "favorite";
+			$(this).val(text);
+		});
 
 
 });
