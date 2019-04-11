@@ -71,3 +71,4 @@ Route::get('/wishlist', function () {
 });
 
 Route::resource('wishlist', 'WishlistController');
+Route::get('/wishlist', 'WishListController@index');

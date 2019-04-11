@@ -18,7 +18,18 @@ class WishlistController extends Controller
      */
     public function index()
     {
-        //
+
+            // $wishlist=DB::table('wishlist')
+            //             ->where('wish_id', $id)
+            //             ->join('products','wishprod_id','=','products.id')
+            //             ->join('users','userwish_id','=','users.id')
+            //             ->select('wish_id','product_name', 'img', 'price', 'description')
+            //             ->first();
+
+
+
+            // return view('wishlist' , ['wishlist'=>$wishlist]);
+            return "sae pute ! ";
     }
 
     /**
@@ -30,15 +41,17 @@ class WishlistController extends Controller
     {
       $user = Auth::user();
       if(isset($user)){
-      $wishProd = $_GET['wishId'];
+      $product = $_GET['wishId'];
       Wishlist::create([
-          'wishprod_id' =>$wishProd,
+          'wishprod_id' =>$product,
           'userwish_id' => $user['id'],
 
       ]);
 
 
-      return 'peter les couilles';
+
+      return redirect()->action('WishlistController@index', ['product' =>$product]);
+
       // return redirect()->action('WishlistController@show', ['id'=>$id , 'product' =>$product]);
     }
     else{
@@ -55,7 +68,8 @@ class WishlistController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
     }
 
     /**
