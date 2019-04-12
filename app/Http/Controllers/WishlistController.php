@@ -33,28 +33,40 @@ class WishlistController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function createByAjax(Request $request)
     {
       $user = Auth::user();
+      
       if(isset($user)){
-      $product = $_GET['wish_product'];
-      Wishlist::create([
-          'wishprod_id' =>$product,
-          'userwish_id' => $user['id'],
+          $productId = $request->query('product_id');
+          
+          Wishlist::create([
+              'wishprod_id' =>$productId,
+              'userwish_id' => $user['id']    
+          ]);
+      }      
+    }
+    
+    public function removeByAjax(Request $request)
+    {
+        $user = Auth::user();
+        
+        if(isset($user)){
+            $productId = $request->query('product_id');
+            
+            Wishlist::where([
+                ['wishprod_id', $productId],
+                ['userwish_id', $user->id]
+            ])->delete();
+        }
+    }
 
-      ]);
-
-
+//       return back();
        
-      return redirect()->action('WishlistController@index');
+      //return redirect()->action('WishlistController@index');
 
       // return redirect()->action('WishlistController@show', ['id'=>$id , 'product' =>$product]);
-    }
-    else{
-      return view('../compte');
-    }
-
-  }
+  
 
     /**
      * Store a newly created resource in storage.

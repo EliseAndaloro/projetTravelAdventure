@@ -1,0 +1,14 @@
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.img_product{
+	width : 400px;
+	height :100%;
+}
+
+.img_container{
+	width : 400px;
+	height : 400px;
+}

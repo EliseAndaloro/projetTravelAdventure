@@ -28,7 +28,9 @@
                                     {{ Auth::user()->name }} <span class="caret"></span>
 
                                 </a>
+                                <form method="get" action="{{ action('WishlistController@index') }}">
                                 	<input type="submit" id="" class="wish small material-icons" value="favorite_border">
+                                </form>
                                 <div class="dropdown-menu dropdown-menu-right" id="deconnexion" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" id="deco" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();

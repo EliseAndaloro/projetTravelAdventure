@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Product;
 use Illuminate\Support\Facades\Auth;
+use App\Wishlist;
 
 class ProductController extends Controller
 {
@@ -75,8 +76,16 @@ class ProductController extends Controller
     public function show($id)
     {
         $user = Auth::user();
-        $product = Product::where('id', $id)->get();
-        return view('detailsproduits', ['product' => $product], ['user'=>$user]);
+        $product = Product::where('id', $id)->first();
+        
+        $wishList = Wishlist::where([
+            ['wishprod_id', $id],
+            ['userwish_id', $user->id]
+        ])->first();
+        
+        $productIsFavorite = ($wishList == null ? 'favorite_border' : 'favorite');
+        
+        return view('detailsproduits', compact('product', 'user', 'productIsFavorite'));
     }
 
     /**

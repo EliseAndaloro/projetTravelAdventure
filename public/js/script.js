@@ -10,9 +10,42 @@ $(function () {
 
 
 	$( ".love" ).click(function() {
-		var text = "favorite";
-			$(this).val(text);
-		});
+		
+		let productId = $(this).attr('id').substr(9);
+		
+		let favorite = "favorite";
+		
+		let notFavorite = "favorite_border";
+		
+		let currentValue = $(this).val();
+		
+		if (currentValue == favorite) {
+			
+			$(this).val(notFavorite);
+			
+			$.get( "removeWishList?product_id=" + productId, 
+					function( data ) {
+						console.log('Retiré des favoris');
+					});
+		}
+		else {
+			$(this).val(favorite);
+			
+			$.get( "createWishList?product_id=" + productId, 
+					function( data ) {
+						console.log('Ajouté aux favoris');
+					});
+		}
+		/*			
+		$.ajax({
+		       url : '/ajax',
+		       type : 'GET',// La ressource ciblée
+		       data: product,
+		       dataType : JSON,
+		    });
+		*/
+		
+	});
 
 
 		$( ".love2" ).click(function() {

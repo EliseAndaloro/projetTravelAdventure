@@ -7,7 +7,6 @@
 <div class="contenu">
 
 	<div class="row" style="z-index:2;">
-	@foreach($product as $product)
 
 		<div class="col s1"id="separateur">
 			<img class="materialboxed" width="450" src="{{asset( $product->img )}}">
@@ -15,10 +14,14 @@
 
 		<div class="col s1">
 
-		<form method="get" action="{{ action('WishlistController@create') }}">
-			<input id="wishId" name="wish_product" type="hidden" value="{{ $product->id }}">
-			<input type="submit" id="onclick" class="love small material-icons" value="favorite_border">
-		</form>
+<!-- 		<form method="get" action="{{ action('WishlistController@create') }}"> -->
+<!-- 			<input id="wish_product" name="wish_product" type="hidden" value="{{ $product->id }}"> -->
+			<input type="submit" 
+					id="favorite_{{ $product->id }}" 
+					class="love small material-icons" 
+					value="{{ $productIsFavorite }}">
+					
+<!-- 		</form> -->
 			<h5 class="font1">{{ $product->product_name }}</h5>
 			<div id="price">{{ $product->price }} €</div>
 			<p class="font">{{ $product->description }}
@@ -114,7 +117,6 @@
 	</div>
 
 
-@endforeach
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script type="text/javascript" src=" {{ asset('js/app.js') }} "></script>
 <script type="text/javascript" src="js/script.js"></script>
