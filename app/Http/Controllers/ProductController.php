@@ -73,10 +73,10 @@ class ProductController extends Controller
     {
         $user = Auth::user();
         $product = Product::where('id', $id)->first();
-        
+
         $wishList = Wishlist::where([
             ['wishprod_id', $id],
-            ['userwish_id', $user->id]
+            ['userwish_id', $user['id']]
         ])->first();
         
         $productIsFavorite = ($wishList == null ? 'favorite_border' : 'favorite');
