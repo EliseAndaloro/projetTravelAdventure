@@ -11,7 +11,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     <body>
-      
+
         <header>
 		<nav class="header nav nav-pills nav-fill" id="main">
   			<a class="navlien nav-item nav-link " href="/projetTravelAdventure/public/">ACCUEIL</a>
@@ -26,8 +26,9 @@
   			@else
   				 <a id="navbarDropdown" class=" =navlien nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
 
+                                </a>
+                                	<input type="submit" id="" class="wish small material-icons" value="favorite_border">
                                 <div class="dropdown-menu dropdown-menu-right" id="deconnexion" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" id="deco" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -38,12 +39,16 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
+
                                 </div>
             @endguest
+
   			<a class="navlien openbtn nav-item nav-link" onclick="openNav()"><i class="small material-icons">card_travel</i></a>
-		</nav>
+
+    </nav>
 
     <div id="mySidepanel" class="sidepanel">
+
           <a href="#" class="monpanier">MON PANIER</a>
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
       <div>
