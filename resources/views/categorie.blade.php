@@ -45,10 +45,10 @@
 					<p>
 
 					<a class="waves-effect waves-light btn plus" href="produit/{{ $product->id }}">Plus de détails</a>
-					<!-- <form method="get" action="{{ action('WishlistController@create') }}"> -->
-					<input id="prodId" name="wishId" type="hidden" value="{{ $product->id }}">
+				<form method="get" action="{{ action('WishlistController@create') }}">
+					<input id="prodId" name="wish_product" type="hidden" value="{{ $product->id }}">
 					<input type="submit" id="onclick2" class="love2 small material-icons" value="favorite_border">
-				<!-- </form> -->
+				 </form> 
 				</div>
 				<div class="card-reveal">
 					<span class="card-title grey-text text-darken-4">{{ $product->name

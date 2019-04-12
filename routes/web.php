@@ -53,6 +53,8 @@ Route::get('/coucou', function () {
 
 
 
+Route::get('/voyage/produit/createWishList', 'WishlistController@createByAjax');
+Route::get('/voyage/produit/removeWishList', 'WishlistController@removeByAjax');
 
 Route::resource('wishlist' , 'WishlistController');
 //Route::get('/wishlist' , 'WishlistController@index');
