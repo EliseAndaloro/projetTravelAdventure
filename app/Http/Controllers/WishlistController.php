@@ -23,7 +23,7 @@ class WishlistController extends Controller
                     ->where('userwish_id', $user->id)
                     ->join('products','wishprod_id','=','products.id')
                     ->join('users','userwish_id','=','users.id')
-                    ->select('products.id','product_name', 'description', 'img')
+                    ->select('product_name', 'description', 'img', 'wish_id')
                     ->get();
         return view('wishlist' , ['wishlist'=>$wishlist]);
     }
@@ -36,24 +36,24 @@ class WishlistController extends Controller
     public function createByAjax(Request $request)
     {
       $user = Auth::user();
-      
+
       if(isset($user)){
           $productId = $request->query('product_id');
-          
+
           Wishlist::create([
               'wishprod_id' =>$productId,
-              'userwish_id' => $user['id']    
+              'userwish_id' => $user['id']
           ]);
-      }      
+      }
     }
-    
+
     public function removeByAjax(Request $request)
     {
         $user = Auth::user();
-        
+
         if(isset($user)){
             $productId = $request->query('product_id');
-            
+
             Wishlist::where([
                 ['wishprod_id', $productId],
                 ['userwish_id', $user->id]
@@ -61,7 +61,13 @@ class WishlistController extends Controller
         }
     }
 
+//       return back();
+       
+      //return redirect()->action('WishlistController@index');
+
+      // return redirect()->action('WishlistController@show', ['id'=>$id , 'product' =>$product]);
   
+
 
     /**
      * Store a newly created resource in storage.
@@ -115,8 +121,15 @@ class WishlistController extends Controller
      * @param  \App\Wishlist  $wishlist
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Wishlist $wishlist)
+    public function destroy($id)
     {
-        //
+
+      $wishlist = DB::table('wishlist')
+                    ->where('wishlist.id', $id)
+                    ->get();
+      return $wishlist;
+    
+
     }
-}
+
+  }

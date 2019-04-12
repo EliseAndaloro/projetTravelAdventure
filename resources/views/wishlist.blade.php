@@ -22,6 +22,14 @@
     </div>
   </div>
 </div>
+<form class="form-horizontal" method="POST"
+  action="{{ route('wishlist.destroy', '$wishlist->wish_id') }}">
+  {{ csrf_field() }} {{ method_field('DELETE') }}
+  <a class="btn btn-primary" data-toggle="collapse"
+    href="#collapseExample" role="button" aria-expanded="false"
+    aria-controls="collapseExample"><i class="small material-icons">delete</i></a>
+
+</form>
 
 @endforeach
 
