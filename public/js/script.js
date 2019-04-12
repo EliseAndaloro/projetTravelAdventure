@@ -9,16 +9,16 @@ $(function () {
 			})
 
 
-	$( "#onclick" ).click(function() {
+	$( ".love" ).click(function() {
 		var text = "favorite";
 			$(this).val(text);
 		});
 
 
-		// $( "#onclick2" ).click(function() {
-		// 	var text = "favorite";
-		// 		$(this).val(text);
-		// 	});
+		$( ".love2" ).click(function() {
+			var text = "favorite";
+				$(this).val(text);
+			});
 
 		// 	 $( "input" ).each(function(){
 		//   $( "#onclick2" ).click(function(){
@@ -31,16 +31,6 @@ $(function () {
 		//
 		//   });
 		// });
-		$( input ).click(function() {
-		  $( "onclick2" ).each(function( i ) {
-		    if ( this.style.color !== "blue" ) {
-		      this.style.color = "blue";
-		    } else {
-		      this.style.color = "";
-		    }
-		  });
-		});
-
 });
 
 //sidenav panier
