@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,800');
+
+.imgWish {
+  height: 300px;
+  width: 500px;
+  margin-left: -3%;
+  border-radius: 8px;
+}
+
+.card {
+  padding-top: 10%;
+}
+
+.row {
+  background-color: #FFF;
+  width: 1000px;
+  height: 300px;
+  border-radius: 8px;
+ box-shadow: 0px 0px 29px rgba(153, 153, 153, 0.6);
+ -webkit-box-shadow: 0px 0px 29px rgba(153, 153, 153, 0.6);
+ -moz-box-shadow: 0px 0px 29px rgba(153, 153, 153, 0.6);
+  margin-left: 170px;
+}
+
+.titreArt {
+  font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 17px;
+    color: #9aab87;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 4%;
+}
+
+.details {
+  font-family: 'Open Sans', sans-serif;
+ font-weight: 400;
+ font-size: 13px;
+ color: #9B9B9B;
+ letter-spacing: 1px;
+}
+
+.basket {
+  background-color: #f28e79;
+  border: none;
+  padding: 10px 50px;
+  border-radius: 100px;
+
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #FFF;
+  letter-spacing: 1.98px;
+margin-left: 21%;
+}
+
+.basket:hover {
+  background-color: #FF935E;
+  cursor: pointer;
+  -ms-transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+}

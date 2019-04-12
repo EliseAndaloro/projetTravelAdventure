@@ -1,27 +1,28 @@
 @extends('layout')
 
 @section ('content')
+<link rel="stylesheet" href="{{asset('css/wish.css')}}">
+<div class="card">
+
 
 @foreach($wishlist as $wishlist )
-<div class="col s12 m7">
-    <h2 class="header">{{ $wishlist->product_name }} </h2>
-    <div class="card horizontal">
-      <div class="card-image" style="width:500px; height:100000000px !important;">
-        <img src="{{ asset($wishlist->img) }}">
-      </div>
-      <div class="card-stacked">
-        <div class="card-content">
-          <p>{{ $wishlist->description }} </p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
-        </div>
-      </div>
+<div class="row">
+  <div class="col s6">
+    <img class="imgWish" src="{{ asset($wishlist->img) }}">
+  </div>
+  <div class="col s6">
+    <p class="titreArt">{{ $wishlist->product_name }} </p>
+    <div class="card-content details">
+      <p>{{ $wishlist->description }} </p>
+    </div>
+    <div class="card-action">
+      <input type="submit" class="basket" value="Je Pars en voyage">
     </div>
   </div>
+</div>
 
 @endforeach
-
+</div>
 
 
 
