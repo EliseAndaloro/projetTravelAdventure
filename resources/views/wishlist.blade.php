@@ -16,7 +16,9 @@
       <p>{{ $wishlist->description }} </p>
     </div>
     <div class="card-action">
+    <form method="get" action="{{ action('ProductController@show' , $wishlist->id) }}">
       <input type="submit" class="basket" value="Je Pars en voyage">
+    </form>
     </div>
   </div>
 </div>

@@ -44,9 +44,7 @@ class ProductController extends Controller
         if($user->is_admin == 1){
             return view('admin');
         }
-        else{
-            return "Fonctionnalités non autorisées ! ";
-        }
+
     }
 
     /**
@@ -60,11 +58,9 @@ class ProductController extends Controller
         $user = Auth::user();
         if($user->is_admin == 1){
             Product::create($request->all());
-            return "Article crée !!!!!!!!!";
+            
         }
-        else{
-            return "zieifjrzoùifhoeùfhrg!";
-        }
+
     }
 
     /**
@@ -101,9 +97,7 @@ class ProductController extends Controller
         if($user->is_admin == 1){
             return view('editproduct', compact('product'));
         }
-        else{
-            return "Fonctionnalités non autorisées ! ";
-        }
+
     }
 
     /**

@@ -23,7 +23,7 @@ class WishlistController extends Controller
                     ->where('userwish_id', $user->id)
                     ->join('products','wishprod_id','=','products.id')
                     ->join('users','userwish_id','=','users.id')
-                    ->select('product_name', 'description', 'img')
+                    ->select('products.id','product_name', 'description', 'img')
                     ->get();
         return view('wishlist' , ['wishlist'=>$wishlist]);
     }
@@ -61,11 +61,6 @@ class WishlistController extends Controller
         }
     }
 
-//       return back();
-       
-      //return redirect()->action('WishlistController@index');
-
-      // return redirect()->action('WishlistController@show', ['id'=>$id , 'product' =>$product]);
   
 
     /**
