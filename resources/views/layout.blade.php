@@ -1,48 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width" />
-	<title>Travel Adventure</title>
-	<link rel="stylesheet" href=" {{ asset('css/app.css') }} ">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-	<link rel="stylesheet" href="{{ asset('css/style.css')}}">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Travel Adventure</title>
+        <link rel="stylesheet" href=" {{ asset('css/app.css') }} ">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="{{ asset('css/style.css')}}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
 
-	<header>
+        <header>
 		<nav class="header nav nav-pills nav-fill" id="main">
-			<a class="navlien nav-item nav-link " href="/projetTravelAdventure/public/">ACCUEIL</a> 
-			<a class="navlien nav-item nav-link" href="{{ url('/randonne') }}">RANDONNÉES</a>
-			<a class="navlien nav-item nav-link" href="{{ url('/sejour') }}">SEJOURS</a>
-			<a class="navlien nav-item nav-link" href="{{ url('/avis') }}">
-				<img src="{{ asset('img/LOGO.svg') }}" id="logo">
-			</a> 
-			<a class="navlien nav-item nav-link" href="{{ url('/weekend') }}">WEEK-ENDS</a>
+  			<a class="navlien nav-item nav-link " href="/projetTravelAdventure/public/">ACCUEIL</a>
+  			<a class="navlien nav-item nav-link" href="{{ url('/voyage/randonne') }}">RANDONNÉE</a>
+  			<a class="navlien nav-item nav-link" href="{{ url('/voyage/sejour') }}">SEJOUR</a>
+  			<a class="navlien nav-item nav-link" href="{{ url('/avis') }}" ><img src="{{ asset('img/LOGO.svg') }}" id="logo"></a>
+  			<a class="navlien nav-item nav-link" href="{{ url('/voyage/weekend') }}">WEEK-END</a>
 
 
-			@guest 
-			<a class="navlien nav-item nav-link" href="{{ url('/compte') }}">MON COMPTE</a> 
-			@else 
-			<a id="navbarDropdown" class=" =navlien nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> {{ Auth::user()->name }} <span class="caret"></span></a>
+  			 @guest
+  			<a class="navlien nav-item nav-link" href="{{ url('/compte') }}">MON COMPTE</a>
+  			@else
+  				 <a id="navbarDropdown" class=" =navlien nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
 
-			<div class="dropdown-menu dropdown-menu-right" id="deconnexion" aria-labelledby="navbarDropdown">
-				<a class="dropdown-item" id="deco" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Se Deconnecter') }} </a>
+                                </a>
+                                <form method="get" action="{{ action('WishlistController@index') }}">
+                                	<input type="submit" id="" class="wish small material-icons" value="favorite_border">
+                                </form>
+                                <div class="dropdown-menu dropdown-menu-right" id="deconnexion" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" id="deco" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Se Deconnecter') }}
+                                    </a>
 
-				<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">@csrf</form>
-			</div>
-			@endguest 
-			<a class="navlien openbtn nav-item nav-link" onclick="openNav()"><i class="small material-icons">card_travel</i></a>
-		</nav>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
 
-		<div id="mySidepanel" class="sidepanel">
-			<a href="#" class="monpanier">MON PANIER</a> 
-			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-			@if(isset($cart))
-			<div>
-				
+                                </div>
+            @endguest
+
+  			<a class="navlien openbtn nav-item nav-link" onclick="openNav()"><i class="small material-icons">card_travel</i></a>
+
+    </nav>
+
+    <div id="mySidepanel" class="sidepanel">
+
+          <a href="#" class="monpanier">MON PANIER</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <div>
+      @if(isset($cart))
 
 				<div class="card">
 					<div class="card-image waves-effect waves-block waves-light">

@@ -326,3 +326,13 @@ footer {
 	position: relative;
 
 }
+
+/****************wishlist***************/
+.wish {
+	background: none;
+	border: none;
+	 cursor: pointer;
+	color: #ffffff;
+	margin-bottom: 2.5em;
+	margin-left: 2em;
+}
