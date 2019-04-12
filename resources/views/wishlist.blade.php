@@ -25,30 +25,9 @@
 
 
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12 mt-3">
-            <div class="card" style="height: 400px !important;">
-                <div class="card-horizontal">
-                    <div class="img-square-wrapper img_container">
-                        <img class="img_product" src="{{ asset($wishlist->img) }}" alt="Card image cap">
-                    </div>
-                    <div class="card-body">
-                        <h4 class="card-title">{{ $wishlist->product_name }}</h4>
-                        <p class="card-text">{{ $wishlist->description }}</p>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
 
 
-@endforeach
 
 
 @endsection
