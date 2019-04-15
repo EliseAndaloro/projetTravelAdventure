@@ -1,0 +1,16 @@
+@media screen and (max-width:800px) {
+	#slide1 {
+    background-image: url(../img/fond1.svg);
+    height: 667px;
+    width : 375;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+	}
+	
+	#mongolfiere1{
+    display : none;
+}
+}
