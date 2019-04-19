@@ -1,21 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Chettan');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 
-body
+@media screen and (min-width: 1366px) {
+	#slide1 {
+		height: 1000px;
+	}
+	#slide2 {
 
-{
+	}
+	#slide3 {
 
-            width :100% ;
-
+	}
 }
 
-footer
-
-{
-
-            width :100%
-
-}
 /*********************************** Nav Footer ******************************************/
 
 
@@ -32,7 +29,7 @@ nav>a {
   text-transform: uppercase;
   font-family: 'Baloo Chettan', cursive;
   font-weight: bold;
-  max-width : 150px;
+  max-width : 150%;
 }
 
 #main{
@@ -93,6 +90,7 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 0;
+
 }
 
 #slide2 {
