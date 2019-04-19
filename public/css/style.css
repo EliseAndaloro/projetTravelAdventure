@@ -1,7 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Chettan');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 
+body
 
+{
+
+            width :100% ;
+
+}
+
+footer
+
+{
+
+            width :100%
+
+}
 /*********************************** Nav Footer ******************************************/
 
 
@@ -24,7 +38,7 @@ nav>a {
 #main{
 	width : 100%;
  	display: flex;
-	justify-content : space-between !important; 
+	justify-content : space-between !important;
 }
 
 #deconnexion {
