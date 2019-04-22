@@ -2,12 +2,12 @@
 
 @section('content')
 	<link rel="stylesheet" href="css/compte.css">
-	
-<div class="container" style="margin-top:130px">
+
+<div class="contenuIns container" style="margin-top:130px">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">inscrit toi</div>
+                <div class="card-header">-inscrit toi-</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">

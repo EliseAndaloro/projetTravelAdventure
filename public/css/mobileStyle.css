@@ -60,10 +60,7 @@
 
 	/*page produit*/
 
-	.carte {
-		width: 900px;
 
-	}
 
 	/*details produits*/
 	#body {
@@ -77,5 +74,26 @@
 	}
 	.materialboxed{
 
+	}
+
+	/*connexion*/
+	.contenuCo {
+		margin-top: 220px;
+		margin-left: 50px;
+		margin-bottom: 600px;
+	}
+
+	.imageCo {
+		margin-left: 170px;
+	}
+
+	.container {
+		width: 800px;
+	}
+
+	/*inscription*/
+	.contenuIns {
+		margin-left: 50px;
+		margin-bottom: 450px;
 	}
 }
