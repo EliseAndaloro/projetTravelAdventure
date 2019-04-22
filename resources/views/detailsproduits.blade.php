@@ -14,11 +14,11 @@
 
 <!-- 		<form method="get" action="{{ action('WishlistController@create') }}"> -->
 <!-- 			<input id="wish_product" name="wish_product" type="hidden" value="{{ $product->id }}"> -->
-			<input type="submit" 
-					id="favorite_{{ $product->id }}" 
-					class="love small material-icons" 
+			<input type="submit"
+					id="favorite_{{ $product->id }}"
+					class="love small material-icons"
 					value="{{ $productIsFavorite }}">
-					
+
 <!-- 		</form> -->
 			<h5 class="font1">{{ $product->product_name }}</h5>
 			<div id="price">{{ $product->price }} €</div>
