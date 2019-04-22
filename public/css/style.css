@@ -1,16 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Baloo+Chettan');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500');
 
-@media screen and (min-width: 1366px) {
-	#slide1 {
-		height: 1000px;
-	}
-	#slide2 {
-
-	}
-	#slide3 {
-
-	}
+@media screen and (min-width: 1080px) {
+ 	footer{
+	width : 100%;
+	} 
 }
 
 /*********************************** Nav Footer ******************************************/
