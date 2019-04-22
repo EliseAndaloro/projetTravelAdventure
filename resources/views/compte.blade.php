@@ -1,7 +1,10 @@
 @extends ('layout') @section ('content')
 <link rel="stylesheet" href="{{asset('css/compte.css')}}">
-<img src="{{ asset('img/connexion.svg') }}"
+<div class="contenuCo">
+	<div class="imageCo">
+<img class="logoCo"src="{{ asset('img/connexion.svg') }}"
 	style="margin-top: 100px; width: 300px; height: 250px; margin-left: 39%; margin-right: 39%;">
+	</div>
 <div class="container">
 	<div class="row justify-content-center">
 		<div class="col-md-8">
@@ -53,7 +56,7 @@
 		</div>
 	</div>
 </div>
-
+</div>
 
 
 

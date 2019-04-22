@@ -1,0 +1,111 @@
+@media screen and (max-width:800px) {
+	/*accueil*/
+	.navlien {
+		font-size: 17px;
+	}
+
+	#logo {
+		width: 60px;
+	}
+
+	#slide1 {
+    background-image: url(../img/fond1.svg);
+    height: 600px;
+    width : 900px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+	}
+
+	#slide2 {
+		background-image: url(../img/fond2.svg);
+		height: 600px;
+    width : 900px;
+	}
+
+	#slide3 {
+		background-image: url(../img/fond3.svg);
+		height: 600px;
+    width : 900px;
+	}
+
+	#mongolfiere2 {
+		margin-right: 30px;
+	}
+
+	#button {
+		position: absolute;
+		margin-left: 247px;
+		font-size: 17px;
+	}
+
+	#button2 {
+		position: absolute;
+		margin-left: 247px;
+		font-size: 17px;
+	}
+
+	#button3 {
+		position: absolute;
+		margin-left: 247px;
+		font-size: 17px;
+		margin-bottom: 70px;
+	}
+
+	footer {
+		width: 900px;
+	}
+
+	/*page produit*/
+
+
+
+	/*details produits*/
+	#body {
+		background-color: #e0ead5;
+		width: 100000px
+	}
+
+	.contenu{
+		width: 900px;
+
+	}
+	.materialboxed{
+
+	}
+
+	/*connexion*/
+	.contenuCo {
+		margin-top: 220px;
+		margin-left: 50px;
+		margin-bottom: 600px;
+	}
+
+	.imageCo {
+		margin-left: 170px;
+	}
+
+	.container {
+		width: 800px;
+	}
+
+	/*inscription*/
+	.contenuIns {
+		margin-left: 50px;
+		margin-bottom: 450px;
+	}
+
+	.card-body {
+		font-size: 25px;
+	}
+
+	/*wishlist*/
+	.cardWish {
+		margin-top: 100px;
+		margin-bottom: 620px;
+		width: 100%;
+	}
+
+}
