@@ -7,11 +7,11 @@
 <div>
 	@foreach($products as $product)
 	@if ($product->categorie == 'randonne')
-	<img class="logoCat fixed-action-btn" src="{{asset('img/randon.svg')}}" width="200px;" height="200px;">
-	@elseif ($product->categorie == 'weekend' ) 
-	<img class="logoCat fixed-action-btn" src="{{asset('img/insta.svg')}}" width="200px;" height="200px;">
+	<img class="logoCat fixed-action-btn" src="{{asset('img/randon.svg')}}" width="230px;" height="230px;"">
+	@elseif ($product->categorie == 'weekend' )
+	<img class="logoCat fixed-action-btn" src="{{asset('img/weekend.svg')}}"width="230px;" height="230px;">
 	@elseif($product->categorie == 'sejour')
-	<img class="logoCat fixed-action-btn" src="{{asset('img/facebook.svg')}}" width="200px;" height="200px;">
+	<img class="logoCat fixed-action-btn" src="{{asset('img/sej.svg')}}" width="230px;" height="230px;">
 	@endif
 	@endforeach
 	<div class="logoSociaux fixed-action-btn">
