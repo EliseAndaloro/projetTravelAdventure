@@ -24,7 +24,7 @@ class ProductController extends Controller
         return view('categorie', ['user'=>$user])->withProducts($products);
 
 
-        // return view('categorie')->withProducts($products);
+     
 
 
 
